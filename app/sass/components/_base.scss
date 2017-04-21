@@ -1,0 +1,87 @@
+// 1. Media Queries
+
+$mobile: "only screen and (max-width: 480px)";
+$phablet: "only screen and (max-width: 768px)";
+$tablet: "only screen and (max-width: 992px)";
+$desktop: "only screen and (max-width: 1200px)";
+$mobile__up: "only screen and (min-width: 480px)";
+$phablet__up: "only screen and (min-width: 768px)";
+$tablet__up: "only screen and (min-width: 992px)";
+$desktop__up: "only screen and (min-width: 1200px)";
+
+// Useful mixins: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/.
+
+// 2. REM Font Sizes.
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+  font-size: $size;
+}
+
+// 3. Variables
+
+// Pixels.
+
+$px_one: 1px;
+$px_two: 2px;
+$px_three: 3px;
+$px_four: 4px;
+$px_five: 5px;
+$px_six: 6px;
+$px_seven: 7px;
+$px_eight: 8px;
+$px_nine: 9px;
+$px_ten: 10px;
+$px_eleven: 11px;
+$px_twelve: 12px;
+$px_thirteen: 13px;
+$px_fourteen: 14px;
+$px_fifteen: 15px;
+
+// Font-sizes.
+
+$font-size-small: $px_twelve; //// 12px
+$font-size-regular: $px_twelve+$px_four; //// 16px
+$font-size-large: $px_fourteen+$px_ten; //// 24px
+
+// Font-weights.
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-black: 700;
+
+// Colors.
+
+$black: #000;
+$white: #fff;
+$green: #2bca7f;
+$grey: #333;
+$greyed: #b5b5b5;
+$greyish: #999;
+$blue: #205685;
+$orange: #f58220;
+
+// Colors init.
+
+$color-primary: $blue;
+
+// 4. Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
+
+*::-moz-selection { color: $white; background-color: $black; }
+*::selection { color: $white; background-color: $black; }
+
+// 5. Font Awesome Icon Insertion
+
+@mixin icon-before($content) {
+  &::before {
+    content: $content;
+    font-family: "fontawesome";
+  }
+}

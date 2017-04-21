@@ -1,0 +1,478 @@
+// Styles
+
+.section-banner {
+  position: relative;
+  height: 450px;
+  background-position: 50% 0%;
+  background-origin: content-box;
+  background: url('../images/banner_bg.png') center center/cover no-repeat;
+  @media #{$phablet} {
+    height: auto;
+    background-position-x: -170px;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      z-index: 1;
+      background-color: $white;
+    }
+  }
+  @media #{$phablet__up} {
+    background-position-x: -150px;
+  }
+  @media #{$tablet__up} {
+    background-position-x: -100px;
+  }
+  @media #{$desktop__up} {
+    background-position-x: center;
+    background-position-y: 0;
+  }
+  .site-header {
+    @extend .container;
+    position: relative;
+    z-index: 2;
+    padding-top: $px_ten+$px_ten; //// 20px;
+    padding-bottom: $px_ten+$px_ten; //// 20px;
+  }
+  .site-logo {
+    @include make-sm-column(6);
+    @media #{$phablet} {
+      text-align: center;
+    }
+  }
+  .site-navigation {
+    text-align: right;
+    @include make-sm-column(6);
+    @media #{$phablet} {
+      text-align: center;
+      margin-top: $px_ten+$px_fifteen; //// 15px;
+      margin-bottom: $px_ten+$px_fifteen; //// 15px;
+    }
+    a {
+      color: $color-primary;
+      @include font-size(14px);
+      font-weight: $font-weight-medium;
+      margin-left: $px_fifteen+$px_ten; //// 25px;
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($color-primary, 15%);
+      }
+      &.navigation__lets_talk {
+        img {
+          margin-left: $px_five;
+        }
+      }
+      @media #{$phablet} {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .site-banner {
+    @include make-sm-column(7);
+    @include make-sm-column-offset(5);
+    .site-title {
+      margin-top: $px_ten*12; //// 120px
+      color: $color-primary;
+      @include font-size(34px);
+      font-weight: $font-weight-light;
+      span {
+        font-weight: $font-weight-medium;
+        margin-left: $px_seven; //// 7px;
+      }
+      @media #{$phablet} {
+        text-align: center;
+        @include font-size(24px);
+        margin-bottom: $px_fifteen; //// 15px
+      }
+    }
+  }
+}
+
+.section-features {
+  color: $white;
+  background-color: $orange;
+  .site-feature {
+    @extend .container;
+  }
+  div[class^="feature__"] {
+    @include make-sm-column(4);
+    > div {
+      width: 100%;
+      position: relative;
+      margin-top: $px_ten*6;
+      margin-bottom: $px_ten*6;
+      border: 1px solid $white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media #{$phablet} {
+        margin-top: $px_fifteen;
+        margin-bottom: $px_fifteen;
+      }
+    }
+  }
+  h2 {
+    margin: 0 0 $px_ten*5;
+    padding: $px_ten*3;
+    line-height: normal;
+    @include font-size(22px);
+    font-weight: $font-weight-light;
+    @media #{$phablet} {
+      margin: 0;
+      @include font-size(20px);
+    }
+    @media #{$tablet} {
+      margin: 0;
+    }
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+    @include font-size(16px);
+    padding: 0 $px_ten*3 $px_ten*3;
+    font-weight: $font-weight-regular;
+    @media #{$phablet} {
+      @include font-size(14px);
+    }
+  }
+}
+
+.section-advertise {
+  margin-top: $px_ten*6;
+  margin-bottom: $px_ten*6;
+  @media #{$phablet} {
+    margin-top: $px_ten*3; //// 30px
+    margin-bottom: $px_ten*3; //// 30px
+  }
+  .site-media {
+    @extend .container;
+  }
+  .media__description {
+    @include make-sm-column(4);
+    @include make-sm-column-offset(1);
+  }
+  .media__animation {
+    @include make-sm-column(6);
+  }
+  h2 {
+    padding: 0;
+    line-height: normal;
+    color: $color-primary;
+    @include font-size(28px);
+    font-weight: $font-weight-light;
+    margin: 0 0 $px_ten*3; //// 30px
+    @media #{$phablet} {
+      @include font-size(20px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    color: $grey;
+    line-height: 1.5;
+    @include font-size(18px);
+    font-weight: $font-weight-regular;
+    @media #{$phablet} {
+      @include font-size(14px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.section-portfolio {
+  width: 100%;
+  @media #{$phablet__up} {
+    display: flex;
+    overflow: hidden;
+  }
+  .project__box {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:first-child {
+      order: 0;
+    }
+    &:first-child + div {
+      order: 1;
+    }
+    &:last-child {
+      order: 2;
+    }
+    @media #{$phablet} {
+      display: block;
+      height: 300px;
+    }
+    @media #{$phablet__up} {
+      flex: 1;
+      height: 600px;
+      flex-direction: column;
+    }
+  }
+}
+
+.section-services {
+  color: $white;
+  padding-top: $px_ten*6;
+  padding-bottom: $px_ten*6;
+  background-position: 50% 0%;
+  background-origin: content-box;
+  background: url('../images/services_bg.png') center center/cover no-repeat;
+  @media #{$phablet} {
+    padding-top: $px_ten*3; //// 30px
+    padding-bottom: $px_ten*3; //// 30px
+  }
+  .site-services {
+    @extend .container;
+  }
+  .services__heading {
+    text-align: center;
+    @include make-sm-column(12);
+  }
+  .services__set_one,
+  .services__set_two {
+    @include make-sm-column(12);
+  }
+  h2 {
+    margin: 0 0 $px_ten*6; //// 60px
+    padding: 0;
+    color: $white;
+    line-height: normal;
+    @include font-size(28px);
+    font-weight: $font-weight-light;
+    span {
+      color: $orange;
+      font-weight: $font-weight-regular;
+    }
+    @media #{$phablet} {
+      @include font-size(18px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  p {
+    padding: 0;
+    text-align: center;
+    line-height: normal;
+    @include font-size(20px);
+    font-weight: $font-weight-regular;
+    margin: 0 0 $px_ten*3; //// 30px
+    @media #{$phablet} {
+      @include font-size(16px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  img {
+    width: auto;
+    height: 48px;
+  }
+  ul {
+    @include make-row();
+    @media #{$phablet} {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  li {
+    text-align: center;
+    list-style-type: none;
+    @media #{$phablet} {
+      margin-bottom: $px_ten*2; //// 20px
+    }
+    span {
+      display: block;
+      line-height: normal;
+      margin-top: $px_ten*2; //// 20px
+      @include font-size(15px);
+      @media #{$phablet} {
+        margin-top: $px_ten;
+        @include font-size(12px);
+      }
+    }
+  }
+  .services__set_one {
+    margin-bottom: $px_ten*8; //// 80px
+    color: $orange !important;
+    @media #{$phablet} {
+      @include font-size(16px);
+      margin-bottom: $px_ten;
+    }
+    li {
+      @include make-xs-column(6);
+      @include make-sm-column(2);
+      &:first-child {
+        @include make-sm-column-offset(1);
+      }
+    }
+  }
+  .services__set_two {
+    color: $white !important;
+    li {
+      @include make-xs-column(6);
+      @include make-sm-column(2);
+    }
+  }
+}
+
+.section-contact {
+  padding-top: $px_ten*6;
+  padding-bottom: $px_ten*6;
+  @media #{$phablet} {
+    padding-top: $px_ten*3; //// 30px
+    padding-bottom: $px_ten*3; //// 30px
+  }
+  .site-contact {
+    @extend .container;
+  }
+  .site__contact_group {
+    text-align: center;
+    @include make-sm-column(12);
+  }
+  .site__contact_form {
+    @include make-sm-column(6);
+    @include make-sm-column-offset(3);
+    text-align: center;
+  }
+  h2 {
+    padding: 0;
+    line-height: normal;
+    color: $color-primary;
+    @include font-size(34px);
+    font-weight: $font-weight-bold;
+    margin: 0 0 $px_ten*3; //// 30px
+    @media #{$phablet} {
+      @include font-size(24px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  h3 {
+    padding: 0;
+    line-height: normal;
+    color: $color-primary;
+    @include font-size(28px);
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+    margin: 0 0 $px_ten*2; //// 20px
+    @media #{$phablet} {
+      @include font-size(18px);
+    }
+  }
+  p {
+    padding: 0;
+    color: $grey;
+    line-height: normal;
+    @include font-size(18px);
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+    margin: 0 0 $px_ten*5; //// 50px
+    @media #{$phablet} {
+      @include font-size(16px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+  input {
+    box-sizing: border-box;
+    line-height: normal;
+    height: auto;
+    color: $grey;
+    box-shadow: none;
+    @extend .form-control;
+    @include font-size(18px);
+    border: 1px solid $greyed;
+    font-weight: $font-weight-light;
+    margin-bottom: $px_ten*3; //// 30px
+    @include input_text_color($greyish);
+    padding: $px_fifteen $px_ten+$px_fifteen; //// 25px
+    @media #{$phablet} {
+      padding: $px_fifteen;
+      @include font-size(14px);
+      margin-bottom: $px_ten*2; //// 20px
+    }
+  }
+  button {
+    color: $white;
+    width: auto;
+    height: auto;
+    border: none;
+    line-height: 1;
+    box-shadow: none;
+    min-width: 225px;
+    text-align: center;
+    background: $orange;
+    margin-top: $px_ten*2; //// 20px
+    border-radius: $px_four;
+    @include font-size(18px);
+    text-transform: uppercase;
+    padding: 18px $px_ten+$px_fifteen;
+    font-weight: $font-weight-bold;
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken($orange, 15%);
+    }
+    @media #{$phablet} {
+      padding: $px_fifteen;
+      @include font-size(16px);
+      margin: 0 0 $px_ten*2; //// 20px
+    }
+  }
+}
+
+.section-footer {
+  color: $white;
+  padding-top: $px_ten*6;
+  padding-bottom: $px_ten*6;
+  background-color: $color-primary;
+  @media #{$phablet} {
+    padding-top: $px_ten*3; //// 30px
+    padding-bottom: $px_ten*3; //// 30px
+  }
+  .site-footer {
+    @extend .container;
+  }
+  .information__copyright {
+    @include make-sm-column(8);
+    p {
+      @include font-size(12px);
+      @media #{$phablet} {
+        margin-bottom: $px_ten*2; //// 20px
+      }
+    }
+  }
+  .information__general {
+    @include make-sm-column(4);
+    p {
+      @include font-size(14px);
+      @media #{$phablet} {
+        margin-bottom: $px_ten*2; //// 20px
+      }
+    }
+    a {
+      color: $white;
+      @include font-size(14px);
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($white, 15%);
+      }
+    }
+  }
+  img {
+    display: block;
+    margin-bottom: $px_ten*7; //// 70px
+    @media #{$phablet} {
+      width: 100%;
+      margin-bottom: $px_ten*2; //// 20px
+    }
+  }
+}

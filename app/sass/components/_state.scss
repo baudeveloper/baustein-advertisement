@@ -1,0 +1,28 @@
+// States Styles.
+
+// Universal Links.
+a {
+  transition: all .6s;
+  &:link {
+    text-decoration: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Input Color.
+@mixin input_text_color($color) {
+  &::-webkit-input-placeholder {
+   color: $color;
+  }
+  &:-moz-placeholder {
+   color: $color;
+  }
+  &::-moz-placeholder {
+   color: $color;
+  }
+  &:-ms-input-placeholder {
+   color: $color;
+  }
+}
