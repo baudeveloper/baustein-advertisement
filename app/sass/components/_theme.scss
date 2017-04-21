@@ -190,7 +190,7 @@
     display: flex;
     overflow: hidden;
   }
-  .portfolio-item {
+  a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,7 +209,7 @@
     }
     @media #{$phablet__up} {
       flex: 1;
-      height: 600px;
+      height: 500px;
       flex-direction: column;
     }
   }

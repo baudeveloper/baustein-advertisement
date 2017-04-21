@@ -41,11 +41,11 @@ section.advertise
       .advertise_content
         img(src="images/icons/media_animation.svg", alt="Good design")
 section.portfolio
-  .portfolio-item
+  a.portfolio-item.item_first(href="#")
     img.hidden(src="images/project_first.png", alt="AFL")
-  .portfolio-item
+  a.portfolio-item.item_second(href="#")
     img.hidden(src="images/project_second.png", alt="Nexgen")
-  .portfolio-item
+  a.portfolio-item.item_third(href="#")
     img.hidden(src="images/project_third.png", alt="Mavrix")
 section.services
   .container
@@ -106,15 +106,15 @@ section.contact
       .contact_form          
         form(role="form")
           .form-group
-            input(type="text", name="first_name", placeholder="First Name", id="first_name")
+            input(type="text", name="first_name", placeholder="First Name", id="first_name", required)
           .form-group
-            input(type="text", name="last_name", placeholder="Last Name", id="last_name")
+            input(type="text", name="last_name", placeholder="Last Name", id="last_name", required)
           .form-group
-            input(type="text", name="company_name", placeholder="Company Name", id="company_name")
+            input(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
           .form-group
-            input(type="url", name="company_website", placeholder="Company Website", id="company_website")
+            input(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
           .form-group
-            input(type="email", name="email_address", placeholder="Email Address", id="email_address")
+            input(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
           .form-group
             input(type="text", name="phone_number", placeholder="Phone Number (Optional)", id="phone_number")
           button(type="submit", role="button", id="button_submit") Send
