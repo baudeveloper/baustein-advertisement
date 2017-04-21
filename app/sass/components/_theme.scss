@@ -101,42 +101,46 @@
   background-color: $orange;
   div[class^="feature_"] {
     @include make-sm-column(4);
-    > div {
-      width: 100%;
-      position: relative;
-      margin-top: $px_ten*6;
-      margin-bottom: $px_ten*6;
+    .panel {
+      border-radius: 0;
+      margin: $px_ten*6 0;
       border: 1px solid $white;
       background-size: cover;
       background-repeat: no-repeat;
+      box-shadow: $px_two $px_two $px_two*2 $px_two*2 rgba(0, 0, 0, 0.1);
       @media #{$phablet} {
-        margin-top: $px_fifteen;
-        margin-bottom: $px_fifteen;
+        margin: $px_fifteen 0;
       }
     }
-  }
-  h2 {
-    margin: 0 0 $px_ten*5;
-    padding: $px_ten*3;
-    line-height: normal;
-    @include font-size(22px);
-    font-weight: $font-weight-light;
-    @media #{$phablet} {
-      margin: 0;
-      @include font-size(18px);
+    .panel-heading {
+      border: none;
+      background: none;
+      padding:$px_ten*3;
+      @media #{$desktop} {
+        margin: 0;
+      }
+      @media #{$desktop__up} {
+        margin: 0 0 $px_ten*3;
+      }
+      h2 {
+        margin: 0;
+        color: $white;
+        line-height: normal;
+        @include font-size(22px);
+        font-weight: $font-weight-light;
+      }
     }
-    @media #{$tablet} {
-      margin: 0;
-    }
-  }
-  p {
-    margin: 0;
-    line-height: 1.5;
-    @include font-size(16px);
-    padding: 0 $px_ten*3 $px_ten*3;
-    font-weight: $font-weight-regular;
-    @media #{$phablet} {
-      @include font-size(14px);
+    .panel-body {
+      padding: $px_ten*3;
+      @media #{$phablet} {
+        padding: 0 $px_ten*3 $px_ten*3;
+      }
+      p {
+        margin: 0;
+        line-height: 1.5;
+        @include font-size(16px);
+        font-weight: $font-weight-regular;
+      }
     }
   }
 }

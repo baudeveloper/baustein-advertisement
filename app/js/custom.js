@@ -3,7 +3,7 @@ $(function() {
   var feature = $('.feature-item');
   feature.each(function(idx, li) {
       var featureThumb = $(this).find('img').attr('src');
-      $(this).find('div').css('background-image', 'url(' + featureThumb + ')');
+      $(this).find('.panel').css('background-image', 'url(' + featureThumb + ')');
   });
 
   var project = $('.portfolio-item');
@@ -12,7 +12,7 @@ $(function() {
       $(this).css('background-image', 'url(' + projectThumb + ')');
   });
 
-  $('.feature-item > div').matchHeight();
+  // $('.feature-item > div').matchHeight();
   $('.portfolio-item > div').matchHeight();
 
 })();
