@@ -1,18 +1,18 @@
 $(function() {
 
-  var feature = $(".feature__box");
+  var feature = $(".feature-item");
   feature.each(function(idx, li) {
       var featureThumb = $(this).find("img").attr('src');
       $(this).find("div").css('background-image', 'url(' + featureThumb + ')');
   });
 
-  var project = $(".project__box");
+  var project = $(".portfolio-item");
   project.each(function(idx, li) {
       var projectThumb = $(this).find("img").attr('src');
       $(this).css('background-image', 'url(' + projectThumb + ')');
   });
 
-  $('.feature__box > div').matchHeight();
-  $('.project__box > div').matchHeight();
+  $('.feature-item > div').matchHeight();
+  $('.portfolio-item > div').matchHeight();
 
 })();

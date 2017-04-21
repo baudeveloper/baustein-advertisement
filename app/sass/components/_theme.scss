@@ -1,6 +1,6 @@
 // Styles
 
-.section-banner {
+.banner {
   position: relative;
   height: 450px;
   background-position: 50% 0%;
@@ -33,12 +33,11 @@
     background-position-x: center;
     background-position-y: 0;
   }
-  .site-header {
-    @extend .container;
+  .container {
     position: relative;
     z-index: 2;
-    padding-top: $px_ten+$px_ten; //// 20px;
-    padding-bottom: $px_ten+$px_ten; //// 20px;
+    padding-top: $px_ten+$px_ten;
+    padding-bottom: $px_ten+$px_ten;
   }
   .site-logo {
     @include make-sm-column(6);
@@ -51,14 +50,14 @@
     @include make-sm-column(6);
     @media #{$phablet} {
       text-align: center;
-      margin-top: $px_ten+$px_fifteen; //// 15px;
-      margin-bottom: $px_ten+$px_fifteen; //// 15px;
+      margin-top: $px_ten+$px_fifteen;
+      margin-bottom: $px_ten+$px_fifteen;
     }
     a {
       color: $color-primary;
       @include font-size(14px);
       font-weight: $font-weight-medium;
-      margin-left: $px_fifteen+$px_ten; //// 25px;
+      margin-left: $px_fifteen+$px_ten;
       &:hover,
       &:active,
       &:focus {
@@ -80,30 +79,27 @@
     @include make-sm-column(7);
     @include make-sm-column-offset(5);
     .site-title {
-      margin-top: $px_ten*12; //// 120px
+      margin-top: $px_ten*12;
       color: $color-primary;
       @include font-size(34px);
       font-weight: $font-weight-light;
       span {
         font-weight: $font-weight-medium;
-        margin-left: $px_seven; //// 7px;
+        margin-left: $px_seven;
       }
       @media #{$phablet} {
         text-align: center;
         @include font-size(24px);
-        margin-bottom: $px_fifteen; //// 15px
+        margin-bottom: $px_fifteen;
       }
     }
   }
 }
 
-.section-features {
+.features {
   color: $white;
   background-color: $orange;
-  .site-feature {
-    @extend .container;
-  }
-  div[class^="feature__"] {
+  div[class^="feature_"] {
     @include make-sm-column(4);
     > div {
       width: 100%;
@@ -127,7 +123,7 @@
     font-weight: $font-weight-light;
     @media #{$phablet} {
       margin: 0;
-      @include font-size(20px);
+      @include font-size(18px);
     }
     @media #{$tablet} {
       margin: 0;
@@ -145,21 +141,18 @@
   }
 }
 
-.section-advertise {
+.advertise {
   margin-top: $px_ten*6;
   margin-bottom: $px_ten*6;
   @media #{$phablet} {
-    margin-top: $px_ten*3; //// 30px
-    margin-bottom: $px_ten*3; //// 30px
+    margin-top: $px_ten*3;
+    margin-bottom: $px_ten*3;
   }
-  .site-media {
-    @extend .container;
-  }
-  .media__description {
+  .advertise_heading {
     @include make-sm-column(4);
     @include make-sm-column-offset(1);
   }
-  .media__animation {
+  .advertise_content {
     @include make-sm-column(6);
   }
   h2 {
@@ -168,10 +161,10 @@
     color: $color-primary;
     @include font-size(28px);
     font-weight: $font-weight-light;
-    margin: 0 0 $px_ten*3; //// 30px
+    margin: 0 0 $px_ten*3;
     @media #{$phablet} {
-      @include font-size(20px);
-      margin: 0 0 $px_ten*2; //// 20px
+      @include font-size(18px);
+      margin: 0 0 $px_ten*2;
     }
   }
   p {
@@ -183,7 +176,7 @@
     font-weight: $font-weight-regular;
     @media #{$phablet} {
       @include font-size(14px);
-      margin: 0 0 $px_ten*2; //// 20px
+      margin: 0 0 $px_ten*2;
     }
   }
   img {
@@ -191,13 +184,13 @@
   }
 }
 
-.section-portfolio {
+.portfolio {
   width: 100%;
   @media #{$phablet__up} {
     display: flex;
     overflow: hidden;
   }
-  .project__box {
+  .portfolio-item {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -222,7 +215,7 @@
   }
 }
 
-.section-services {
+.services {
   color: $white;
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
@@ -230,22 +223,15 @@
   background-origin: content-box;
   background: url('../images/services_bg.png') center center/cover no-repeat;
   @media #{$phablet} {
-    padding-top: $px_ten*3; //// 30px
-    padding-bottom: $px_ten*3; //// 30px
+    padding-top: $px_ten*3;
+    padding-bottom: $px_ten*3;
   }
-  .site-services {
-    @extend .container;
-  }
-  .services__heading {
+  .services_heading {
     text-align: center;
     @include make-sm-column(12);
   }
-  .services__set_one,
-  .services__set_two {
-    @include make-sm-column(12);
-  }
   h2 {
-    margin: 0 0 $px_ten*6; //// 60px
+    margin: 0 0 $px_ten*6;
     padding: 0;
     color: $white;
     line-height: normal;
@@ -256,8 +242,8 @@
       font-weight: $font-weight-regular;
     }
     @media #{$phablet} {
-      @include font-size(18px);
-      margin: 0 0 $px_ten*2; //// 20px
+      @include font-size(16px);
+      margin: 0 0 $px_ten*2;
     }
   }
   p {
@@ -266,10 +252,10 @@
     line-height: normal;
     @include font-size(20px);
     font-weight: $font-weight-regular;
-    margin: 0 0 $px_ten*3; //// 30px
+    margin: 0 0 $px_ten*3;
     @media #{$phablet} {
       @include font-size(16px);
-      margin: 0 0 $px_ten*2; //// 20px
+      margin: 0 0 $px_ten*2;
     }
   }
   img {
@@ -287,12 +273,12 @@
     text-align: center;
     list-style-type: none;
     @media #{$phablet} {
-      margin-bottom: $px_ten*2; //// 20px
+      margin-bottom: $px_ten*2;
     }
     span {
       display: block;
       line-height: normal;
-      margin-top: $px_ten*2; //// 20px
+      margin-top: $px_ten*2;
       @include font-size(15px);
       @media #{$phablet} {
         margin-top: $px_ten;
@@ -300,9 +286,10 @@
       }
     }
   }
-  .services__set_one {
-    margin-bottom: $px_ten*8; //// 80px
+  .services_first {
+    margin-bottom: $px_ten*8;
     color: $orange !important;
+    @include make-sm-column(12);
     @media #{$phablet} {
       @include font-size(16px);
       margin-bottom: $px_ten;
@@ -315,8 +302,9 @@
       }
     }
   }
-  .services__set_two {
+  .services_second {
     color: $white !important;
+    @include make-sm-column(12);
     li {
       @include make-xs-column(6);
       @include make-sm-column(2);
@@ -324,60 +312,57 @@
   }
 }
 
-.section-contact {
+.contact {
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
   @media #{$phablet} {
-    padding-top: $px_ten*3; //// 30px
-    padding-bottom: $px_ten*3; //// 30px
+    padding-top: $px_ten*3;
+    padding-bottom: $px_ten*3;
   }
-  .site-contact {
-    @extend .container;
-  }
-  .site__contact_group {
+  .contact_group {
     text-align: center;
     @include make-sm-column(12);
   }
-  .site__contact_form {
+  .contact_form {
+    text-align: center;
     @include make-sm-column(6);
     @include make-sm-column-offset(3);
-    text-align: center;
   }
   h2 {
     padding: 0;
     line-height: normal;
     color: $color-primary;
+    margin: 0 0 $px_ten*3;
     @include font-size(34px);
     font-weight: $font-weight-bold;
-    margin: 0 0 $px_ten*3; //// 30px
     @media #{$phablet} {
-      @include font-size(24px);
-      margin: 0 0 $px_ten*2; //// 20px
+      @include font-size(20px);
+      margin: 0 0 $px_ten*2;
     }
   }
   h3 {
     padding: 0;
     line-height: normal;
     color: $color-primary;
+    margin: 0 0 $px_ten*2;
     @include font-size(28px);
     text-transform: uppercase;
     font-weight: $font-weight-light;
-    margin: 0 0 $px_ten*2; //// 20px
     @media #{$phablet} {
-      @include font-size(18px);
+      @include font-size(16px);
     }
   }
   p {
     padding: 0;
     color: $grey;
     line-height: normal;
+    margin: 0 0 $px_ten*5;
     @include font-size(18px);
     text-transform: uppercase;
     font-weight: $font-weight-light;
-    margin: 0 0 $px_ten*5; //// 50px
     @media #{$phablet} {
-      @include font-size(16px);
-      margin: 0 0 $px_ten*2; //// 20px
+      @include font-size(14px);
+      margin: 0 0 $px_ten*2;
     }
   }
   input {
@@ -388,15 +373,15 @@
     box-shadow: none;
     @extend .form-control;
     @include font-size(18px);
+    margin-bottom: $px_ten*3;
     border: 1px solid $greyed;
     font-weight: $font-weight-light;
-    margin-bottom: $px_ten*3; //// 30px
     @include input_text_color($greyish);
-    padding: $px_fifteen $px_ten+$px_fifteen; //// 25px
+    padding: $px_fifteen $px_ten+$px_fifteen;
     @media #{$phablet} {
       padding: $px_fifteen;
       @include font-size(14px);
-      margin-bottom: $px_ten*2; //// 20px
+      margin-bottom: $px_ten*2;
     }
   }
   button {
@@ -409,7 +394,7 @@
     min-width: 225px;
     text-align: center;
     background: $orange;
-    margin-top: $px_ten*2; //// 20px
+    margin-top: $px_ten*2;
     border-radius: $px_four;
     @include font-size(18px);
     text-transform: uppercase;
@@ -423,56 +408,84 @@
     @media #{$phablet} {
       padding: $px_fifteen;
       @include font-size(16px);
-      margin: 0 0 $px_ten*2; //// 20px
+      margin: 0 0 $px_ten*2;
     }
   }
 }
 
-.section-footer {
+footer {
   color: $white;
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
-  background-color: $color-primary;
+  background-color: $grey_light;
   @media #{$phablet} {
-    padding-top: $px_ten*3; //// 30px
-    padding-bottom: $px_ten*3; //// 30px
+    text-align: center;
   }
-  .site-footer {
-    @extend .container;
+  p {
+    line-height: normal;
   }
-  .information__copyright {
-    @include make-sm-column(8);
+  .brand {
+    @include make-sm-column(5);
+    @include make-md-column(4);
+    @include make-lg-column(3);
+  }
+  .rgd {
+    @include make-sm-column(3);
+    @include make-md-column(4);
+    @include make-lg-column(5);
+    @media #{$phablet} {
+      margin-top: $px_ten*3;
+      margin-bottom: $px_ten*3;
+    }
+    small {
+      display: block;
+      @include font-size(9px);
+      text-transform: uppercase;
+    }
+  }
+  .address {
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
     p {
-      @include font-size(12px);
+      line-height: 1.5;
+      @include font-size(14px);
       @media #{$phablet} {
-        margin-bottom: $px_ten*2; //// 20px
+        margin-bottom: 0;
       }
     }
   }
-  .information__general {
-    @include make-sm-column(4);
+  .copyright {
+    margin-top: $px_ten*5;
+    @include make-sm-column(8);
+    @media #{$phablet} {
+      margin-top: $px_ten*2;
+    }
+    @media #{$phablet__up} {
+      float: left;
+    }
     p {
-      @include font-size(14px);
+      @include font-size(12px);
       @media #{$phablet} {
-        margin-bottom: $px_ten*2; //// 20px
+        margin-bottom: 0;
       }
+    }
+  }
+  .phone {
+    margin-top: $px_ten*5;
+    @include make-sm-column(4);
+    @media #{$phablet} {
+      margin-top: $px_ten*2;
+    }
+    @media #{$phablet__up} {
+      float: right;
     }
     a {
       color: $white;
       @include font-size(14px);
-      &:hover,
-      &:active,
-      &:focus {
+      &:hover, &:active, &:focus {
         color: darken($white, 15%);
       }
-    }
-  }
-  img {
-    display: block;
-    margin-bottom: $px_ten*7; //// 70px
-    @media #{$phablet} {
-      width: 100%;
-      margin-bottom: $px_ten*2; //// 20px
     }
   }
 }
