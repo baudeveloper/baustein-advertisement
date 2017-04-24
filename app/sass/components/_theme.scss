@@ -106,7 +106,7 @@
 .features {
   color: $white;
   background-color: $orange;
-  div[class^="feature_"] {
+  div[class^="feature"] {
     @include make-sm-column(4);
     .panel {
       border-radius: 0;
@@ -116,7 +116,7 @@
       background-repeat: no-repeat;
       box-shadow: $px_two $px_two $px_two*2 $px_two*2 rgba(0, 0, 0, 0.1);
       @media #{$phablet} {
-        margin: $px_fifteen 0;
+        margin: 0 0 $px_fifteen;
       }
     }
     .panel-heading {
@@ -149,15 +149,24 @@
         font-weight: $font-weight-regular;
       }
     }
+    @media #{$phablet} {
+      &:first-child {
+        margin-top: $px_fifteen;
+      }
+    }
   }
   .equal {
     display: flex;
-    .feature-item {
-      display: flex;
-      flex: 1 1 auto;
+    flex-wrap: wrap;
+    @media #{$phablet} {
+      flex-direction: column;
     }
-    .panel {
-      flex: 1 0 100%;
+    > div {
+      display: flex;
+      flex-direction: column;
+      > * {
+        flex-grow: 1;
+      }
     }
   }
 }
