@@ -33,7 +33,7 @@ input {
 
 // Tab styles.
 .tab_wrap {
-  background-color: $grey_dark;
+  background-color: $grey;
 }
 #portfolio_tab {
   width: 100%;
@@ -43,6 +43,12 @@ input {
     flex: 1;
     height: 500px;
     flex-direction: column;
+    @media #{$desktop} {
+      height: 400px;
+    }
+    @media #{$tablet} {
+      height: 300px;
+    }
     @media #{$phablet} {
       height: 200px;
     }
@@ -97,21 +103,60 @@ input {
   .tab-pane {
     margin-top: $px_ten*5;
     margin-bottom: $px_ten*3;
-  }
-  .portfolio_child_items {
-    @include make-xs-column(6);
-    @include make-sm-column(3);
-    img {
-      @extend .img-thumbnail;
-      width: 100%;
+    @media #{$phablet} {
+      margin-top: $px_ten*2;
       margin-bottom: $px_ten*2;
     }
   }
+  .portfolio_sidebar {
+    @include make-sm-column(4);
+    span {
+      color: $white;
+      margin-bottom: $px_ten;
+      @include font-size(14px);
+    }
+    .client_name {
+      margin-bottom: 0;
+      display: inline-block;
+      font-weight: $font-weight-regular;
+    }
+    .client_location {
+      display: block;
+      font-weight: $font-weight-regular;
+      &::before {
+        content: "—";
+        color: $orange_dark;
+        margin-right: $px_five;
+      }
+    }
+    .client_services {
+      display: block;
+      font-weight: $font-weight-bold;
+    }
+    .client_tags {
+      display: block;
+      font-style: italic;
+      font-weight: $font-weight-regular;
+      &::before {
+        content: "•";
+        color: $orange_dark;
+        margin-right: $px_five;
+      }
+    }
+  }
+  .portfolio_gallery {
+    @include make-sm-column(8);
+    img {
+      width: 100%;
+    }
+  }
   .close {
-    top: $px_fifteen;
     opacity: 1;
     color: $white;
-    right: $px_fifteen;
+    font-weight: 100;
     position: absolute;
+    top: -$px_five;
+    right: $px_fifteen;
+    @include font-size(48px);
   }
 }
