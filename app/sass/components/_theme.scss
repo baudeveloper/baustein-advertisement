@@ -187,7 +187,7 @@
   }
   .equal {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     @media #{$phablet} {
       flex-direction: column;
     }
@@ -222,6 +222,12 @@
         right: $px_ten*3;
         bottom: -$px_fifteen;
         width: calc(100% - 60px);
+        @media #{$phablet} {
+          width: auto;
+          margin: 0 auto;
+          max-width: 200px;
+          bottom: -$px_ten*3;
+        }
       }
     }
   }
@@ -385,6 +391,12 @@
       @include make-sm-column(2);
       &:first-child {
         @include make-sm-column-offset(1);
+      }
+      @media #{$phablet} {
+        &:last-child {
+          text-align: center;
+          @include make-xs-column(12);
+        }
       }
     }
   }
