@@ -1,8 +1,6 @@
 $(function() {
 
-  AOS.init({
-    duration: 1200,
-  });
+  AOS.init();
 
   var feature = $('.feature-item');
   feature.each(function(idx, li) {

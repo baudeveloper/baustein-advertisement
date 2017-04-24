@@ -45,20 +45,31 @@ section.advertise
       .advertise_heading
         h2 A limited marketing budget does not mean limited access to good design.
         p For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.
-      .advertise_content(data-aos="fade-left")
-        img(src="images/icons/media_animation.svg", alt="Good design")
+      .advertise_content
+        img(src="images/icons/animation_designer.svg", alt="Good design", data-aos="fade-right", data-aos-delay="1000")
+        img(src="images/icons/animation_arrow.svg", alt="Good design", data-aos="fade-right", data-aos-delay="2000")
+        img(src="images/icons/animation_roles.svg", alt="Good design", data-aos="fade-right", data-aos-delay="3000")
 section.portfolio
   .tab_wrap
     ul#portfolio_tab.nav.nav-tabs(data-tabs='tabs')
       li.portfolio-item
         a.item_first(data-toggle='tab', href='#portfolio_first')
           img.hidden(src="images/project_first.png", alt="AFL")
+          span
+            | See More
+            i.fa.fa-long-arrow-right(aria-hidden="true")
       li.portfolio-item
         a.item_second(data-toggle='tab', href='#portfolio_second')
           img.hidden(src="images/project_second.png", alt="AFL")
+          span
+            | See More
+            i.fa.fa-long-arrow-right(aria-hidden="true")
       li.portfolio-item
         a.item_third(data-toggle='tab', href='#portfolio_third')
           img.hidden(src="images/project_third.png", alt="AFL")
+          span
+            | See More
+            i.fa.fa-long-arrow-right(aria-hidden="true")
     .tab-content
       #portfolio_first.tab-pane
         .row
