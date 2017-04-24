@@ -16,8 +16,8 @@ header.banner
           span Good Design.
 section.features
   .container
-    .row
-      .feature_impression.feature-item      
+    .row.equal
+      .feature_impression.feature-item  
         img.hidden(src="images/feature_first.png", alt="First Impressions Matter")
         .panel
           .panel-heading
@@ -31,28 +31,123 @@ section.features
             h2 Return on Investment
           .panel-body
             p 75% of people judget the credibility of a business based on design. Research shows that every $100 invested in design generates $235 in company revenue.
-      .feature_report.feature-item  
-        a(href="http://www.pdf995.com/samples/pdf.pdf")        
-          img.hidden(src="images/feature_third.png", alt="First Impressions Matter")
-          .panel
-            .panel-heading
-              h2 Get the Report
-            .panel-body
+      .feature_report.feature-item
+        img.hidden(src="images/feature_third.png", alt="First Impressions Matter")
+        a.panel(href="http://www.pdf995.com/samples/pdf.pdf")        
+          .panel-heading
+            h2 Get the Report
+          .panel-body
 section.advertise
   .container
     .row
       .advertise_heading
         h2 A limited marketing budget does not mean limited access to good design.
         p For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.
-      .advertise_content
+      .advertise_content(data-aos="fade-left")
         img(src="images/icons/media_animation.svg", alt="Good design")
 section.portfolio
-  a.portfolio-item.item_first(href="#")
-    img.hidden(src="images/project_first.png", alt="AFL")
-  a.portfolio-item.item_second(href="#")
-    img.hidden(src="images/project_second.png", alt="Nexgen")
-  a.portfolio-item.item_third(href="#")
-    img.hidden(src="images/project_third.png", alt="Mavrix")
+  .tab_wrap
+    ul#portfolio_tab.nav.nav-tabs(data-tabs='tabs')
+      li.portfolio-item
+        a.item_first(data-toggle='tab', href='#portfolio_first')
+          img.hidden(src="images/project_first.png", alt="AFL")
+      li.portfolio-item
+        a.item_second(data-toggle='tab', href='#portfolio_second')
+          img.hidden(src="images/project_second.png", alt="AFL")
+      li.portfolio-item
+        a.item_third(data-toggle='tab', href='#portfolio_third')
+          img.hidden(src="images/project_third.png", alt="AFL")
+    .tab-content
+      #portfolio_first.tab-pane
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120/fff/000", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        a.close(href="#")
+          i.fa.fa-times-circle(aria-hidden='true')
+      #portfolio_second.tab-pane
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120/aaa/000", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        a.close(href="#")
+          i.fa.fa-times-circle(aria-hidden='true')
+      #portfolio_third.tab-pane
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        .row
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+          .portfolio_child_items
+            img(src="http://placehold.it/200x120", alt="Sample")
+        a.close(href="#")
+          i.fa.fa-times-circle(aria-hidden='true')
 section.services
   .container
     .row
@@ -140,4 +235,3 @@ footer.site-footer
         a(href="tel:6474305292") 647 430 5292
       .copyright
         p Copyright © 2006 – 2017 Baustein Strategic Design Group Inc. All Rights Reserved.
-      

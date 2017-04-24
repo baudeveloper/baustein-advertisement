@@ -1,3 +1,12 @@
 $brand-primary: $color-primary !default;
 $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $icon-font-path: 'if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/") !default';
+
+// Tabs
+$nav-tabs-border-color: transparent !default;
+$nav-tabs-link-hover-border-color: transparent !default;
+$nav-tabs-active-link-hover-bg: transparent !default;
+$nav-tabs-active-link-hover-color: transparent !default;
+$nav-tabs-active-link-hover-border-color: transparent !default;
+$nav-tabs-justified-link-border-color: transparent !default;
+$nav-tabs-justified-active-link-border-color: transparent !default;

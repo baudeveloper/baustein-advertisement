@@ -1,5 +1,9 @@
 $(function() {
 
+  AOS.init({
+    duration: 1200,
+  });
+
   var feature = $('.feature-item');
   feature.each(function(idx, li) {
       var featureThumb = $(this).find('img').attr('src');
@@ -9,10 +13,13 @@ $(function() {
   var project = $('.portfolio-item');
   project.each(function(idx, li) {
       var projectThumb = $(this).find("img").attr('src');
-      $(this).css('background-image', 'url(' + projectThumb + ')');
+      $(this).find("a").css('background-image', 'url(' + projectThumb + ')');
   });
 
-  // $('.feature-item > div').matchHeight();
-  $('.portfolio-item > div').matchHeight();
+  $('.close').on('click', function(e) {
+    e.preventDefault();
+    $(this).parent().removeClass('active');
+    $(this).closest('.tab-content').siblings('#portfolio_tab').find('li.active').removeClass('active');
+  });
 
 })();
