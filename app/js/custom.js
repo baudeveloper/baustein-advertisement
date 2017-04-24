@@ -6,7 +6,7 @@ $(function() {
 
   var feature = $('.feature-item');
   feature.each(function(idx, li) {
-      var featureThumb = $(this).find('img').attr('src');
+      var featureThumb = $(this).find('.thumb').attr('src');
       $(this).find('.panel').css('background-image', 'url(' + featureThumb + ')');
   });
 

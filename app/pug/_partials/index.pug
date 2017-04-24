@@ -5,7 +5,7 @@ header.banner
         a(href="http://baustein.ca", target="_blank", title="Visit Baustein Strategic Design Group Inc.")
           img(src="images/logo.png", alt="Baustein Strategic Design Group Inc.")
       nav.site-navigation(role="navigation")
-        a.navigation__lets_talk(href="#")
+        a.navigation__lets_talk(href="#contact__link")
           | Let's Talk
           img(src="images/icons/lets_talk.svg", alt="Let's Talk")
         a.navigation__phone(href="tel:+16474305262") +1 647 430 5262
@@ -18,25 +18,27 @@ section.features
   .container
     .row.equal
       .feature-item  
-        img.hidden(src="images/feature_first.png", alt="First Impressions Matter")
+        img.thumb.hidden(src="images/feature_first.png", alt="First Impressions Matter")
         .panel
           .panel-heading
             h2 First Impressions Matter
           .panel-body
             p Potential clients form an opinion your firm in less than 10 seconds based on the design of your brand and communication materials.
       .feature-item
-        img.hidden(src="images/feature_second.png", alt="First Impressions Matter")
+        img.thumb.hidden(src="images/feature_second.png", alt="First Impressions Matter")
         .panel
           .panel-heading
             h2 Return on Investment
           .panel-body
             p 75% of people judget the credibility of a business based on design. Research shows that every $100 invested in design generates $235 in company revenue.
-      .feature-item
-        img.hidden(src="images/feature_third.png", alt="First Impressions Matter")
-        a.panel(href="http://www.pdf995.com/samples/pdf.pdf", target="_blank")        
+      .feature-item.link
+        a.panel(href="http://www.pdf995.com/samples/pdf.pdf", target="_blank")                  
           .panel-heading
             h2 Get the Report
+            img.icon(src="images/icons/logo_pdf.svg", alt="PDF File")
           .panel-body
+            img.child_thumb(src="images/icons/logo_report.svg", alt="Get the report")
+            p.hidden Testing paragraph
 section.advertise
   .container
     .row
@@ -197,7 +199,7 @@ section.services
           li
             img(src="images/icons/honest_approach.svg", alt="Honest, reliable and confidential approach")
             span Honest, reliable and confidential approach       
-section.contact  
+section.contact#contact__link 
   .container
     .row
       .contact_group
