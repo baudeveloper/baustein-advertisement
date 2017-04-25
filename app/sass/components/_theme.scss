@@ -124,6 +124,91 @@
   }
 }
 
+.process {
+  .banner {
+    height: 100%;
+    min-height: 100vh;
+    background: url('../images/banner_bg.png') center center/cover no-repeat;
+    @media #{$desktop__up} {
+      background-position-x: -300px;
+      background-position-y: 0;
+    }
+    @media #{$desktop} {
+      background-position-x: -300px;
+    }
+    @media #{$tablet} {
+      background-position-x: -350px;
+    }
+    @media #{$phablet} {
+      height: auto;
+      background-position-x: -450px;
+    }
+    @media #{$mobile} {
+      background-position-x: -450px;
+    }
+    .thanks {
+      @include make-sm-column(12);
+    }
+    .thanks_wrap {
+      display: block;
+      padding: $px_ten*3;
+      margin-top: $px_ten*5;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .site-title {
+      padding: 0;
+      line-height: normal;
+      color: $color-primary;
+      margin: 0 0 $px_fifteen;
+      @include font-size(24px);
+      font-weight: $font-weight-light;
+      @media #{$tablet} {
+        @include font-size(20px);
+      }
+      @media #{$phablet} {
+        @include font-size(18px);
+      }
+    }
+    .btn {
+      color: $white;
+      width: auto;
+      height: auto;
+      border: none;
+      line-height: 1;
+      box-shadow: none;
+      text-align: center;
+      margin-top: $px_ten*2;
+      margin-right: $px_ten;
+      border-radius: $px_four;
+      @include font-size(16px);
+      text-transform: uppercase;
+      padding: $px_fifteen $px_ten*2;
+      font-weight: $font-weight-regular;
+      @media #{$phablet} {;
+        margin-top: $px_ten;
+        @include font-size(14px);
+        padding: $px_ten $px_fifteen;
+      }
+      &.btn_previous {
+        background: $orange;
+        &:hover,
+        &:active,
+        &:focus {
+          background: darken($orange, 15%);
+        }
+      }
+      &.btn_website {
+        background: $color-primary;
+        &:hover,
+        &:active,
+        &:focus {
+          background: darken($color-primary, 15%);
+        }
+      }
+    }
+  }
+}
+
 .features {
   color: $white;
   background-color: $orange;
