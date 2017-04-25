@@ -21,7 +21,7 @@
 	    mail($from, $subject2, $message2, $headers2);
 
       echo '<script>
-        alert("Thanks");
+        alert("Thanks, Your form has been submitted. We will contact you shortly.");
       </script>';
     }
 ?>
