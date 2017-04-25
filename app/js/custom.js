@@ -20,4 +20,6 @@ $(function() {
     $(this).closest('.tab-content').siblings('#portfolio_tab').find('li.active').removeClass('active');
   });
 
+  $('.form_contact').validate();
+
 })();

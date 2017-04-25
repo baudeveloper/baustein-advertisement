@@ -160,3 +160,16 @@ input {
     @include font-size(48px);
   }
 }
+
+// Validation styles.
+input {
+  &.error {
+    margin-bottom: $px_ten !important;
+  }
+}
+label {
+  &.error {
+    color: $orange;
+    margin: 0 0 $px_ten;
+  }
+}
