@@ -473,6 +473,10 @@
       @include font-size(14px);
       margin: 0 0 $px_ten*2;
     }
+    &.success {
+      margin: 0 !important;
+      text-transform: none;
+    }
   }
   input {
     box-sizing: border-box;
