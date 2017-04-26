@@ -1,8 +1,11 @@
 <?php
+
   if( ($_SERVER['REQUEST_METHOD'] == 'POST') ) :
 
       $formErrors = false;
-
+      if(isset($_POST['human'])) :
+        $human = filter_var($_POST['human'], FILTER_SANITIZE_STRING);
+      endif;
       if(isset($_POST['first_name'])) :
         $first_name = filter_var($_POST['first_name'], FILTER_SANITIZE_STRING);
       endif;
@@ -23,6 +26,10 @@
       endif;
 
       // Regular Expressions
+      if($human !== '7') :
+        $error_hu = "<div class='error'>You answered the anti-spam question incorrectly!</div>";
+        $formErrors = true;
+      endif;
       if(!(preg_match("/[A-Za-z]+/", $first_name))) :
         $error_fn = '<div class="error">Sorry, Enter first name in desired format again. Only letters are allowed.</div>';
         $formErrors = true;
@@ -40,7 +47,7 @@
         $formErrors = true;
       endif;
 
-      if(!($formErrors)) :
+      if(!($formErrors) && $human === '7') :
         $to = "tej@baustein.ca";
         $subject = "From $first_name -- Baustein Landing Page";
         $message = "Name: ".$first_name." ".$last_name."\nCompany Name: ".$company_name."\nCompany Website: ".$company_website."\nEmail Address: ".$email_address."\nPhone Number: ".$phone_number;
@@ -50,7 +57,6 @@
           $msg = "Sorry, There were some errors found in the form.";
         endif;
       endif;
-
   endif;
 ?>
 
@@ -270,6 +276,15 @@
                               endif;
                             ?>
                         </div>
+                        <div class="form-group">
+                          <label for="human">What is 5+2? (Anti-Spam)</label>
+                          <input type="text" name="human" placeholder="Type your answer...">
+                          <?php
+                            if(isset($error_hu)) :
+                              echo $error_hu;
+                            endif;
+                          ?>
+                        </div>
                         <?php
                           if(isset($msg)) :
                             echo '<div class="report">'.$msg.'</div>';
@@ -302,7 +317,8 @@
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/bootstrap-select.min.js"></script>
     <script src="vendor/js/aos.js"></script>
-    <!-- <script src="vendor/js/jquery.validate.min.js"></script> -->
+    <script src="vendor/js/jquery.validate.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/custom.min.js"></script>
 </body>
 
