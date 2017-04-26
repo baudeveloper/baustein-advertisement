@@ -35,4 +35,17 @@ $(function() {
     }
   });
 
+  $('.filled').hide();
+  $('#form_contact .fill').bind('keyup change',function() {
+    var empty = $('.fill').map(function(index, el) {
+      return !$(el).val().length ? el : null;
+    }).get();
+    var checker = $('.filled');
+    !empty.length ? checker.show() : checker.hide();
+  });
+
+  if ( $("#form_contact").is( ".form-error" ) ) {
+    $(this).find('.filled').show();
+  }
+
 })();

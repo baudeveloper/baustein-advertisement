@@ -163,18 +163,18 @@ section.contact#contact__link
       .contact_form          
         form#form_contact(role="form", action="", method="POST", name="form_contact")
           .form-group
-            input(type="text", name="first_name", placeholder="First Name", id="first_name", required)
+            input.fill(type="text", name="first_name", placeholder="First Name", id="first_name", required)
           .form-group
-            input(type="text", name="last_name", placeholder="Last Name", id="last_name", required)
+            input.fill(type="text", name="last_name", placeholder="Last Name", id="last_name", required)
           .form-group
-            input(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
+            input.fill(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
           .form-group
-            input(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
+            input.fill(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
           .form-group
-            input(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
+            input.fill(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
           .form-group
             input(type="text", name="phone_number", placeholder="Phone Number e.g. 123-123-1234 (Optional)", id="phone_number")
-          .form-group
+          .form-group.filled
             label(for="human") What is 5+2? (Anti-Spam)
             input(type="text", name="human", placeholder="Type your answer...")
           button(type="submit", role="button", id="submit", name="submit") Send
