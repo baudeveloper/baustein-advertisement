@@ -318,7 +318,6 @@
     <script src="vendor/js/bootstrap-select.min.js"></script>
     <script src="vendor/js/aos.js"></script>
     <script src="vendor/js/jquery.validate.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/custom.min.js"></script>
 </body>
 
