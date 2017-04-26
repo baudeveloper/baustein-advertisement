@@ -39,6 +39,8 @@ input {
   width: 100%;
   display: flex;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
   > li {
     flex: 1;
     height: 500px;
@@ -172,4 +174,16 @@ label {
     color: $orange;
     margin: 0 0 $px_ten;
   }
+}
+.error {
+  color: $orange;
+  @include font-size(14px);
+  font-weight: $font-weight-bold;
+  margin: -$px_fifteen 0 $px_ten*2;
+}
+.report {
+  color: $grey;
+  @include font-size(14px);
+  font-weight: $font-weight-bold;
+  margin: -$px_ten 0 $px_five;
 }
