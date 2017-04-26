@@ -237,15 +237,9 @@
                     <p>I would like to book a conference call to discuss my wealth management firm’s needs.</p>
                 </div>
                 <div class="contact_form">
-                    <form id="form_contact" role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#form_contact" method="POST" name="form_contact"
-                      <?php
-                        if(isset($error_fn) || isset($error_ln) || isset($error_cn) || isset($error_pn) || isset($error_hu)) :
-                          echo "class='form-error'";
-                        endif;
-                      ?>
-                    >
+                    <form id="form_contact" role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#form_contact" method="POST" name="form_contact">
                         <div class="form-group">
-                            <input class="fill" required type="text" name="first_name" placeholder="First Name" id="first_name" value="<?php if(isset($first_name)) { echo $first_name; } ?>">
+                            <input required type="text" name="first_name" placeholder="First Name" id="first_name" value="<?php if(isset($first_name)) { echo $first_name; } ?>">
                             <?php
                               if(isset($error_fn)) :
                                 echo $error_fn;
@@ -253,7 +247,7 @@
                             ?>
                         </div>
                         <div class="form-group">
-                            <input class="fill" required type="text" name="last_name" placeholder="Last Name" id="last_name" value="<?php if(isset($last_name)) { echo $last_name; } ?>">
+                            <input required type="text" name="last_name" placeholder="Last Name" id="last_name" value="<?php if(isset($last_name)) { echo $last_name; } ?>">
                             <?php
                               if(isset($error_ln)) :
                                 echo $error_ln;
@@ -261,7 +255,7 @@
                             ?>
                         </div>
                         <div class="form-group">
-                            <input class="fill" required type="text" name="company_name" placeholder="Company Name" id="company_name" value="<?php if(isset($company_name)) { echo $company_name; } ?>">
+                            <input required type="text" name="company_name" placeholder="Company Name" id="company_name" value="<?php if(isset($company_name)) { echo $company_name; } ?>">
                             <?php
                               if(isset($error_cn)) :
                                 echo $error_cn;
@@ -269,20 +263,20 @@
                             ?>
                         </div>
                         <div class="form-group">
-                            <input class="fill" required type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>">
+                            <input required type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>">
                         </div>
                         <div class="form-group">
-                            <input class="fill" required type="email" name="email_address" placeholder="Email Address" id="email_address" value="<?php if(isset($email_address)) { echo $email_address; } ?>">
+                            <input required type="email" name="email_address" placeholder="Email Address" id="email_address" value="<?php if(isset($email_address)) { echo $email_address; } ?>">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="phone_number" placeholder="Phone Number e.g. 123-123-1234 (Optional)" id="phone_number" value="<?php if(isset($phone_number)) { echo $phone_number; } ?>">
+                            <input type="text" name="phone_number" placeholder="Phone Number e.g. 123-123-1234 (Optional)" id="phone_number" value="<?php if(isset($phone_number)) { echo $phone_number; } ?>" maxlength="10">
                             <?php
                               if(isset($error_pn)) :
                                 echo $error_pn;
                               endif;
                             ?>
                         </div>
-                        <div class="form-group filled">
+                        <div class="form-group">
                           <label for="human">What is 5+2? (Anti-Spam)</label>
                           <input type="text" name="human" placeholder="Type your answer...">
                           <?php

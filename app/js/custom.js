@@ -20,10 +20,14 @@ $(function() {
     $(this).closest('.tab-content').siblings('#portfolio_tab').find('li.active').removeClass('active');
   });
 
+  $('#phone_number').keyup(function(){
+    $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
+  });
+
   $('#form_contact').validate({
     rules: {
       phone_number: {
-        minlength: 12,
+        minlength: 10,
         maxlength: 12
       },
       company_website: "required url"
