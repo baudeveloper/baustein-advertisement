@@ -24,19 +24,19 @@
 
       // Regular Expressions
       if(!(preg_match("/[A-Za-z]+/", $first_name))) :
-        $error_fn = '<div class="error">Sorry, Enter first name in desired format again.</div>';
+        $error_fn = '<div class="error">Sorry, Enter first name in desired format again. Only letters are allowed.</div>';
         $formErrors = true;
       endif;
       if(!(preg_match("/[A-Za-z]+/", $last_name))) :
-        $error_ln = '<div class="error">Sorry, Enter last name in desired format again.</div>';
+        $error_ln = '<div class="error">Sorry, Enter last name in desired format again. Only letters are allowed.</div>';
         $formErrors = true;
       endif;
       if(!(preg_match("/[A-Za-z]+/", $company_name))) :
-        $error_cn = '<div class="error">Sorry, Enter company name in desired format again.</div>';
+        $error_cn = '<div class="error">Sorry, Enter company name in desired format again. Only letters are allowed.</div>';
         $formErrors = true;
       endif;
       if(!(preg_match("/\d{3}[\-]\d{3}[\-]\d{4}/", $phone_number)) && !empty($phone_number)) :
-        $error_pn = '<div class="error">Sorry, Enter phone number in desired format again.</div>';
+        $error_pn = '<div class="error">Sorry, Enter phone number in desired format again, For e.g. 123-123-1234.</div>';
         $formErrors = true;
       endif;
 
@@ -257,7 +257,7 @@
                             ?>
                         </div>
                         <div class="form-group">
-                            <input type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>" required>
+                            <input onkeyup="checkUR(this)" type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>" required>
                         </div>
                         <div class="form-group">
                             <input type="email" name="email_address" placeholder="Email Address" id="email_address" value="<?php if(isset($email_address)) { echo $email_address; } ?>" required>
@@ -302,7 +302,7 @@
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/bootstrap-select.min.js"></script>
     <script src="vendor/js/aos.js"></script>
-    <script src="vendor/js/jquery.validate.min.js"></script>
+    <!-- <script src="vendor/js/jquery.validate.min.js"></script> -->
     <script src="js/custom.min.js"></script>
 </body>
 
