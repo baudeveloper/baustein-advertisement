@@ -41,7 +41,9 @@ $(function() {
       return !$(el).val().length ? el : null;
     }).get();
     var checker = $('.filled');
+    var success = $('.report');
     !empty.length ? checker.show() : checker.hide();
+    !empty.length ? success.hide() : success.hide();
   });
 
   if ( $("#form_contact").is( ".form-error" ) ) {
