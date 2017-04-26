@@ -20,6 +20,19 @@ $(function() {
     $(this).closest('.tab-content').siblings('#portfolio_tab').find('li.active').removeClass('active');
   });
 
-  $('.form_contact').validate();
+  $('#form_contact').validate({
+    rules: {
+      phone_number: {
+        minlength: 12,
+        maxlength: 12
+      }
+    },
+    messages: {
+      phone_number: {
+        minlength: "Phone number should be exactly 10 characters, For e.g. 123-123-1234",
+        maxlength: "Phone number should be exactly 10 characters, For e.g. 123-123-1234"
+      }
+    }
+  });
 
 })();
