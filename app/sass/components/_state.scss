@@ -166,24 +166,27 @@ input {
 // Validation styles.
 input {
   &.error {
-    // margin-bottom: $px_ten !important;
+    margin-bottom: $px_ten !important;
   }
 }
 label {
   &.error {
     color: $orange;
-    // margin: 0 0 $px_ten;
+    margin: 0 0 $px_ten;
   }
 }
 .error {
   color: $orange;
   @include font-size(14px);
   font-weight: $font-weight-bold;
-  // margin: -$px_fifteen 0 $px_ten*2;
+  margin: -$px_fifteen 0 $px_ten*2;
 }
 .report {
   color: $grey;
   @include font-size(14px);
   font-weight: $font-weight-bold;
-  // margin: -$px_ten 0 $px_five;
+  margin: -$px_ten 0 $px_five;
+  @media #{$phablet} {
+    margin: 0 0 $px_fifteen;
+  }
 }

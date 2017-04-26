@@ -571,7 +571,7 @@
     box-shadow: none;
     @extend .form-control;
     @include font-size(18px);
-    // margin-bottom: $px_ten*3;
+    margin-bottom: $px_ten*3;
     border: 1px solid $greyed;
     font-weight: $font-weight-light;
     @include input_text_color($greyish);
@@ -579,7 +579,7 @@
     @media #{$phablet} {
       padding: $px_fifteen;
       @include font-size(14px);
-      // margin-bottom: $px_ten*2;
+      margin-bottom: $px_ten*2;
     }
   }
   button {
