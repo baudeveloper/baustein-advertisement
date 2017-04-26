@@ -25,12 +25,17 @@ $(function() {
       phone_number: {
         minlength: 12,
         maxlength: 12
-      }
+      },
+      company_website: "required url"
     },
     messages: {
       phone_number: {
         minlength: "Phone number should be exactly 10 characters, For e.g. 123-123-1234",
         maxlength: "Phone number should be exactly 10 characters, For e.g. 123-123-1234"
+      },
+      company_website: {
+        required: "Please enter a valid URL beginning with HTTP, For e.g. https://baustein.ca",
+        url: "Please enter a valid URL beginning with HTTP, For e.g. https://baustein.ca"
       }
     }
   });
