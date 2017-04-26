@@ -231,7 +231,7 @@
                     <p>I would like to book a conference call to discuss my wealth management firm’s needs.</p>
                 </div>
                 <div class="contact_form">
-                    <form class="form_contact" role="form" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST" name="form_contact">
+                    <form id="form_contact" role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#form_contact" method="POST" name="form_contact">
                         <div class="form-group">
                             <input type="text" name="first_name" placeholder="First Name" id="first_name" value="<?php if(isset($first_name)) { echo $first_name; } ?>" required>
                             <?php
