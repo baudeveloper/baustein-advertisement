@@ -256,7 +256,8 @@
       }
       p {
         margin: 0;
-        line-height: normal;
+        max-width: 85%;
+        line-height: 1.4;
         @include font-size(16px);
         font-weight: $font-weight-regular;
         @media #{$phablet} {
@@ -281,7 +282,7 @@
       flex-direction: column;
       @media #{$phablet} {
         height: auto;
-        min-height: 225px;
+        min-height: 200px;
       }
       > * {
         flex-grow: 1;
@@ -429,17 +430,11 @@
     padding: 0;
     text-align: center;
     line-height: normal;
-    @include font-size(20px);
     font-weight: $font-weight-regular;
     margin: 0 0 $px_ten*3;
     @media #{$phablet} {
-      @include font-size(16px);
       margin: 0 0 $px_ten*2;
     }
-  }
-  img {
-    width: auto;
-    height: 48px;
   }
   ul {
     @include make-row();
@@ -458,10 +453,8 @@
       display: block;
       line-height: normal;
       margin-top: $px_ten*2;
-      @include font-size(15px);
       @media #{$phablet} {
         margin-top: $px_ten;
-        @include font-size(12px);
       }
     }
   }
@@ -470,7 +463,6 @@
     color: $orange !important;
     @include make-sm-column(12);
     @media #{$phablet} {
-      @include font-size(16px);
       margin-bottom: $px_ten;
     }
     li {
@@ -486,6 +478,25 @@
         }
       }
     }
+    img {
+      width: auto;
+      height: 100px;
+      @media #{$phablet} {
+        height: 50px;
+      }
+    }
+    p {
+      @include font-size(24px);
+      @media #{$phablet} {
+        @include font-size(16px);
+      }
+    }
+    span {
+      @include font-size(18px);
+      @media #{$phablet} {
+        @include font-size(14px);
+      }
+    }
   }
   .services_second {
     color: $white !important;
@@ -493,6 +504,25 @@
     li {
       @include make-xs-column(6);
       @include make-sm-column(2);
+    }
+    img {
+      width: auto;
+      height: 48px;
+      @media #{$phablet} {
+        height: 32px;
+      }
+    }
+    p {
+      @include font-size(20px);
+      @media #{$phablet} {
+        @include font-size(14px);
+      }
+    }
+    span {
+      @include font-size(14px);
+      @media #{$phablet} {
+        @include font-size(12px);
+      }
     }
   }
 }
