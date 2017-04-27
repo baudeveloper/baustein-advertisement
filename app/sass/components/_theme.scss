@@ -263,6 +263,10 @@
         @media #{$phablet} {
           @include font-size(14px);
         }
+        &::after,
+        &::before {
+          content: '';
+        }
       }
     }
     @media #{$phablet} {
