@@ -102,7 +102,7 @@
             </div>
             <div class="row">
                 <div class="site-banner">
-                    <h1 class="site-title">Build your Wealth Management Client Base by Investing in<span>Good Design.</span></h1>
+                    <h1 class="site-title">Build your Wealth Management Client Base.<span>Invest in Good Design.</span></h1>
                 </div>
             </div>
         </div>
@@ -111,29 +111,29 @@
         <div class="container">
             <div class="row equal">
                 <div class="feature-item"> <img class="thumb hidden" src="images/feature_first.png" alt="First Impressions Matter">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h2>First Impressions Matter</h2>
-                        </div>
-                        <div class="panel-body">
-                            <p>Potential clients form an opinion your firm in less than 10 seconds based on the design of your brand and communication materials.</p>
-                        </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h2>First Impressions Matter</h2>
                     </div>
+                    <div class="panel-body">
+                      <p>Potential clients form an opinion of your firm in less than 10 seconds based on the design of your brand and communication materials.</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="feature-item"><img class="thumb hidden" src="images/feature_second.png" alt="First Impressions Matter">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h2>Return on Investment</h2>
-                        </div>
-                        <div class="panel-body">
-                            <p>75% of people judget the credibility of a business based on design. Research shows that every $100 invested in design generates $235 in company revenue.</p>
-                        </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h2>Propel your ROI</h2>
                     </div>
+                    <div class="panel-body">
+                      <p>75% of people judge the credibility of a business based on design. Research shows that every $100 invested in design generates $235 in company revenue<sup>*</sup>.</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="feature-item link">
                     <a class="panel" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
                         <div class="panel-heading">
-                            <h2>Get the Report</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="PDF File">
+                            <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="PDF File">
                         </div>
                         <div class="panel-body"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the report">
                             <p class="hidden">Testing paragraph</p>
@@ -146,12 +146,10 @@
     <section class="advertise">
         <div class="container">
             <div class="row">
-                <div class="advertise_heading">
-                    <h2>A limited marketing budget does not mean limited access to good design.</h2>
-                    <p>For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any
-                        business.
-                    </p>
-                </div>
+              <div class="advertise_heading">
+                <h2>A limited marketing budget does not mean limited access to good design.</h2>
+                <p>For roughly the same cost of a part-time designer, you can access an entire design team, each person specializing in different areas of design that will cover all of your company’s creative needs. Good design is imperative to the success of your business.</p>
+              </div>
                 <div class="advertise_content"><img src="images/icons/animation_designer.svg" alt="Good design" data-aos="fade-right" data-aos-delay="1000"><img src="images/icons/animation_arrow.svg" alt="Good design" data-aos="fade-right" data-aos-delay="2000"><img src="images/icons/animation_roles.svg"
                         alt="Good design" data-aos="fade-right" data-aos-delay="3000"></div>
             </div>
@@ -187,40 +185,39 @@
       </div>
     </section>
     <section class="services">
-        <div class="container">
-            <div class="row">
-                <div class="services_heading">
-                    <h2>
-                        Baustein is a multi-disciplinary creative partner, offering you a <span>‘one-stop-shop’ </span>for all your firms’ marketing and sales material needs. We specialize in creating strong brands and professional design solutions for
-                        online and print materials.</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="services_first">
-                    <p>Title 1</p>
-                    <ul>
-                        <li> <img src="images/icons/brand_development.svg" alt="Brand Development"><span>Brand Development            </span></li>
-                        <li><img src="images/icons/marketing_strategy.svg" alt="Marketing Strategy"><span>Marketing Strategy            </span></li>
-                        <li><img src="images/icons/print_design.svg" alt="Print Design"><span>Print Design            </span></li>
-                        <li><img src="images/icons/website_design.svg" alt="Website Design"><span>Website Design            </span></li>
-                        <li><img src="images/icons/website_development.svg" alt="Website Development"><span>Website Development            </span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="services_second">
-                    <p>Title 2</p>
-                    <ul>
-                        <li><img src="images/icons/extensive_experience.svg" alt="Extensive experience and a knowledgeable team"><span>Extensive experience and a knowledgeable team            </span></li>
-                        <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at affordable rates"><span>Access to an entire team at affordable rates            </span></li>
-                        <li><img src="images/icons/timely_execution.svg" alt="Timely execution of your urgent projects"><span>Timely execution of your urgent projects            </span></li>
-                        <li><img src="images/icons/customized_billing.svg" alt="Customized and transparent billing model"><span>Customized and transparent billing model            </span></li>
-                        <li><img src="images/icons/impressive_list.svg" alt="Impressive list of premium design services"><span>Impressive list of premium design services          </span></li>
-                        <li><img src="images/icons/honest_approach.svg" alt="Honest, reliable and confidential approach"><span>Honest, reliable and confidential approach       </span></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="services_heading">
+            <h2>
+               Baustein is a multi-disciplinary creative partner – a <span>‘one-stop-shop’ </span>for all your firms’ marketing and creative needs. We specialize in creating memorable brand identities and professional design solutions for all your online and print materials.</h2>
+          </div>
         </div>
+        <div class="row">
+          <div class="services_first">
+            <p>Specialized Services</p>
+            <ul>
+              <li> <img src="images/icons/brand_development.svg" alt="Brand Development"><span>Brand Development            </span></li>
+              <li><img src="images/icons/marketing_strategy.svg" alt="Annual Report Design"><span>Annual Report Design          </span></li>
+              <li><img src="images/icons/print_design.svg" alt="Website Design"><span>Website Design         </span></li>
+              <li><img src="images/icons/website_design.svg" alt="Sales Material Design"><span>Sales Material Design         </span></li>
+              <li><img src="images/icons/website_development.svg" alt="Content Development"><span>Content Development          </span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="services_second">
+            <p>Truly Compelling Arguments</p>
+            <ul>
+              <li><img src="images/icons/extensive_experience.svg" alt="Extensive experience in corporate design"><span>Extensive experience in corporate design</span></li>
+              <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at an affordable rate"><span>Access to an entire team at an affordable rate          </span></li>
+              <li><img src="images/icons/timely_execution.svg" alt="Timely execution of your urgent projects"><span>Timely execution of your urgent projects            </span></li>
+              <li><img src="images/icons/customized_billing.svg" alt="Customized and transparent billing model"><span>Customized and transparent billing model            </span></li>
+              <li><img src="images/icons/impressive_list.svg" alt="Impressive list of premium design services"><span>Impressive list of premium design services          </span></li>
+              <li><img src="images/icons/honest_approach.svg" alt="Honest, reliable and confidential approach"><span>Honest, reliable and confidential approach    </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="contact" id="contact__link">
         <div class="container">
