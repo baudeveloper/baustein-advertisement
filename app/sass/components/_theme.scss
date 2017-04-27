@@ -298,8 +298,9 @@
       }
       .icon {
         position: absolute;
-        top: $px_fifteen;
-        right: $px_fifteen;
+        height: 36px;
+        top: $px_ten*2;
+        right: $px_ten*2;
       }
       .child_thumb {
         position: absolute;
@@ -373,6 +374,7 @@
       }
     }
     &:first-child + img {
+      width: 65px;
       @media #{$desktop} {
         width: 50px;
       }
@@ -634,6 +636,9 @@ footer {
     @media #{$phablet} {
       margin-top: $px_ten*3;
       margin-bottom: $px_ten*3;
+    }
+    img {
+      width: 85px;
     }
     small {
       display: block;

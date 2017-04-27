@@ -1,21 +1,25 @@
-<svg
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="70px" height="59px">
-<defs>
-<filter id="Filter_0">
-    <feOffset in="SourceAlpha" dx="0" dy="1" />
-    <feGaussianBlur result="blurOut" stdDeviation="2.236" />
-    <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
-    <feComposite operator="out" in="floodOut" in2="blurOut" result="compOut" />
-    <feComposite operator="in" in="compOut" in2="SourceAlpha" />
-    <feComponentTransfer><feFuncA type="linear" slope="0.29"/></feComponentTransfer>
-    <feBlend mode="multiply" in2="SourceGraphic" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 70 59" style="enable-background:new 0 0 70 59;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Filter_0);}
+	.st1{fill:#ECECEC;}
+</style>
+<filter  id="Filter_0">
+	<feOffset  dx="0" dy="1" in="SourceAlpha"></feOffset>
+	<feGaussianBlur  result="blurOut" stdDeviation="2.236"></feGaussianBlur>
+	<feFlood  flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+	<feComposite  in="floodOut" in2="blurOut" operator="out" result="compOut"></feComposite>
+	<feComposite  in="compOut" in2="SourceAlpha" operator="in"></feComposite>
+	<feComponentTransfer>
+		<feFuncA  slope="0.29" type="linear"></feFuncA>
+	</feComponentTransfer>
+	<feBlend  in2="SourceGraphic" mode="multiply"></feBlend>
 </filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  fill="rgb(236, 236, 236)"
- d="M63.394,25.892 L41.727,4.115 C40.405,2.785 38.261,2.785 36.940,4.115 C35.618,5.444 35.618,7.597 36.940,8.926 L52.826,24.895 L6.810,24.895 C4.940,24.895 3.425,26.418 3.425,28.298 C3.425,30.177 4.940,31.700 6.810,31.700 L52.826,31.700 L36.940,47.670 C35.618,48.999 35.618,51.152 36.940,52.481 C37.601,53.146 38.468,53.478 39.334,53.478 C40.200,53.478 41.068,53.146 41.727,52.481 L63.394,30.704 C64.716,29.374 64.716,27.221 63.394,25.892 L63.394,25.892 Z"/>
+<g class="st0">
+	<path class="st1" d="M63.4,25.9L41.7,4.1c-1.3-1.3-3.5-1.3-4.8,0c-1.3,1.3-1.3,3.5,0,4.8l15.9,16h-46c-1.9,0-3.4,1.5-3.4,3.4
+		c0,1.9,1.5,3.4,3.4,3.4h46l-15.9,16c-1.3,1.3-1.3,3.5,0,4.8c0.7,0.7,1.5,1,2.4,1s1.7-0.3,2.4-1l21.7-21.8
+		C64.7,29.4,64.7,27.2,63.4,25.9L63.4,25.9z"/>
 </g>
 </svg>
