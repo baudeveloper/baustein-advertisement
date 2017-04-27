@@ -120,7 +120,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="feature-item"><img class="thumb hidden" src="images/feature_second.png" alt="First Impressions Matter">
+                <div class="feature-item"><img class="thumb hidden" src="images/feature_second.png" alt="Propel your ROI">
                   <div class="panel">
                     <div class="panel-heading">
                       <h2>Propel your ROI</h2>
@@ -130,16 +130,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="feature-item link">
-                    <a class="panel" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
-                        <div class="panel-heading">
-                            <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="PDF File">
-                        </div>
-                        <div class="panel-body"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the report">
-                            <p class="hidden">Testing paragraph</p>
-                        </div>
-                    </a>
-                </div>
+                <div class="feature-item link"><a class="panel" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
+                    <div class="panel-heading">
+                      <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="Get the Facts">
+                    </div>
+                    <div class="panel-body"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Facts">
+                      <p class="hidden">Testing paragraph</p>
+                    </div></a></div>
             </div>
         </div>
     </section>
@@ -150,8 +147,7 @@
                 <h2>A limited marketing budget does not mean limited access to good design.</h2>
                 <p>For roughly the same cost of a part-time designer, you can access an entire design team, each person specializing in different areas of design that will cover all of your company’s creative needs. Good design is imperative to the success of your business.</p>
               </div>
-                <div class="advertise_content"><img src="images/icons/animation_designer.svg" alt="Good design" data-aos="fade-right" data-aos-delay="1000"><img src="images/icons/animation_arrow.svg" alt="Good design" data-aos="fade-right" data-aos-delay="2000"><img src="images/icons/animation_roles.svg"
-                        alt="Good design" data-aos="fade-right" data-aos-delay="3000"></div>
+                <div class="advertise_content"><img src="images/icons/animation_designer.svg" alt="Sole Graphic Designer" data-aos="fade-right" data-aos-delay="1000"><img src="images/icons/animation_arrow.svg" alt="Arrow" data-aos="fade-right" data-aos-delay="2000"><img src="images/icons/animation_roles.svg" alt="Roles of a Designer" data-aos="fade-right" data-aos-delay="3000"></div>
             </div>
         </div>
     </section>
