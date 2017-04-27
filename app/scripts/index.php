@@ -193,10 +193,10 @@
             <p>Specialized Services</p>
             <ul>
               <li> <img src="images/icons/brand_development.svg" alt="Brand Development"><span>Brand Development            </span></li>
-              <li><img src="images/icons/marketing_strategy.svg" alt="Annual Report Design"><span>Annual Report Design          </span></li>
-              <li><img src="images/icons/print_design.svg" alt="Website Design"><span>Website Design         </span></li>
-              <li><img src="images/icons/website_design.svg" alt="Sales Material Design"><span>Sales Material Design         </span></li>
-              <li><img src="images/icons/website_development.svg" alt="Content Development"><span>Content Development          </span></li>
+              <li><img src="images/icons/annual_report_design.svg" alt="Annual Report Design"><span>Annual Report Design          </span></li>
+              <li><img src="images/icons/website_design.svg" alt="Website Design"><span>Website Design         </span></li>
+              <li><img src="images/icons/sales_material_design.svg" alt="Sales Material Design"><span>Sales Material Design         </span></li>
+              <li><img src="images/icons/content_development.svg" alt="Content Development"><span>Content Development          </span></li>
             </ul>
           </div>
         </div>
