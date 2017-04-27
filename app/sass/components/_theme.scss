@@ -485,6 +485,12 @@
     img {
       width: auto;
       height: 100px;
+      @media #{$desktop} {
+        height: 60px;
+      }
+      @media #{$tablet} {
+        height: 55px;
+      }
       @media #{$phablet} {
         height: 50px;
       }
