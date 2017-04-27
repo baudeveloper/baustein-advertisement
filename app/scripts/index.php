@@ -158,39 +158,33 @@
         </div>
     </section>
     <section class="portfolio">
-        <div class="tab_wrap">
-            <ul class="nav nav-tabs" id="portfolio_tab" data-tabs="tabs">
-                <li class="portfolio-item">
-                    <a class="item_first" data-toggle="tab" href="#portfolio_first"><img class="hidden" src="images/project_first.png" alt="AFL"><span>See More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                </li>
-                <li class="portfolio-item">
-                    <a class="item_second" data-toggle="tab" href="#portfolio_second"><img class="hidden" src="images/project_second.png" alt="AFL"><span>See More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                </li>
-                <li class="portfolio-item">
-                    <a class="item_third" data-toggle="tab" href="#portfolio_third"><img class="hidden" src="images/project_third.png" alt="AFL"><span>See More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane" id="portfolio_first">
-                    <div class="row">
-                        <div class="portfolio_sidebar"> <span class="client_name">Client A</span><span class="client_location">City, Country</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
-                        <div class="portfolio_gallery"><img src="images/portfolio_layout.png" alt="Sample"></div>
-                    </div><a class="close" href="#"><span>&times;</span></a>
-                </div>
-                <div class="tab-pane" id="portfolio_second">
-                    <div class="row">
-                        <div class="portfolio_sidebar"> <span class="client_name">Client B</span><span class="client_location">City, Country</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
-                        <div class="portfolio_gallery"><img src="images/portfolio_layout.png" alt="Sample"></div>
-                    </div><a class="close" href="#"><span>&times;</span></a>
-                </div>
-                <div class="tab-pane" id="portfolio_third">
-                    <div class="row">
-                        <div class="portfolio_sidebar"> <span class="client_name">Client C</span><span class="client_location">City, Country</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
-                        <div class="portfolio_gallery"><img src="images/portfolio_layout.png" alt="Sample"></div>
-                    </div><a class="close" href="#"><span>&times;</span></a>
-                </div>
-            </div>
+      <div class="tab_wrap">
+        <ul class="nav nav-tabs" id="portfolio_tab" data-tabs="tabs">
+          <li class="portfolio-item"><a class="item_first" data-toggle="tab" href="#portfolio_first"><img class="hidden" src="images/project_first.png" alt="AFL Investments Limited"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
+          <li class="portfolio-item"><a class="item_second" data-toggle="tab" href="#portfolio_second"><img class="hidden" src="images/project_second.png" alt="NexGen Financial Corporation"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
+          <li class="portfolio-item"><a class="item_third" data-toggle="tab" href="#portfolio_third"><img class="hidden" src="images/project_third.png" alt="Mavrix Fund Management Inc."><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="portfolio_first">
+            <div class="row">
+              <div class="portfolio_sidebar"> <span class="client_name">AFL Investments Limited</span><span class="client_location">Hamilton, Bermuda</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
+              <div class="portfolio_gallery"><img src="images/portfolio_layout_afl.png" alt="AFL Investments Limited"></div>
+            </div><a class="close" href="#"><span>&times;</span></a>
+          </div>
+          <div class="tab-pane" id="portfolio_second">
+            <div class="row">
+              <div class="portfolio_sidebar"> <span class="client_name">NexGen Financial Corporation</span><span class="client_location">Toronto, Canada</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
+              <div class="portfolio_gallery"><img src="images/portfolio_layout_nexgen.png" alt="NexGen Financial Corporation"></div>
+            </div><a class="close" href="#"><span>&times;</span></a>
+          </div>
+          <div class="tab-pane" id="portfolio_third">
+            <div class="row">
+              <div class="portfolio_sidebar"> <span class="client_name">Mavrix Fund Management Inc.</span><span class="client_location">Toronto, Canada</span><span class="client_services">Logo, Factsheets, Introductory Brochure</span><span class="client_tags">Branding, Reporting, Website (not shown)</span></div>
+              <div class="portfolio_gallery"><img src="images/portfolio_layout_mavirix.png" alt="Mavrix Fund Management Inc."></div>
+            </div><a class="close" href="#"><span>&times;</span></a>
+          </div>
         </div>
+      </div>
     </section>
     <section class="services">
         <div class="container">
