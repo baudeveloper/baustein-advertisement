@@ -34,8 +34,8 @@ $(function() {
         maxlength: "Phone number should be exactly 10 characters, For e.g. 123-123-1234"
       },
       company_website: {
-        required: "Please enter a valid URL beginning with HTTP, For e.g. https://baustein.ca",
-        url: "Please enter a valid URL beginning with HTTP, For e.g. https://baustein.ca"
+        required: "Please enter a valid URL beginning with http://",
+        url: "Please enter a valid URL beginning with http://"
       }
     }
   });
