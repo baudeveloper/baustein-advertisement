@@ -102,7 +102,7 @@
             </div>
             <div class="row">
                 <div class="site-banner">
-                    <h1 class="site-title">Build your Wealth Management Client Base.<span>Invest in Good Design.</span></h1>
+                    <h1 class="site-title">Build your Wealth Management Client Base. Invest in <span>Good Design.</span></h1>
                 </div>
             </div>
         </div>
