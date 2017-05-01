@@ -502,6 +502,7 @@
       }
     }
     span {
+      word-wrap: break-word;
       @include font-size(18px);
       @media #{$phablet} {
         @include font-size(14px);
@@ -529,6 +530,7 @@
       }
     }
     span {
+      word-wrap: break-word;
       @include font-size(14px);
       @media #{$phablet} {
         @include font-size(12px);
