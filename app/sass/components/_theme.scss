@@ -76,8 +76,8 @@
     }
   }
   .site-banner {
-    @include make-sm-column(5);
-    @include make-sm-column-offset(7);
+    @include make-sm-column(8);
+    @include make-sm-column-offset(4);
     @include make-md-column(6);
     @include make-md-column-offset(6);
     @include make-lg-column(7);
@@ -92,7 +92,8 @@
         // margin-left: $px_seven;
       }
       @media #{$tablet} {
-        @include font-size(22px);
+        @include font-size(32px);
+        margin-top: $px_ten*5;
         margin-bottom: $px_fifteen;
       }
       @media #{$phablet} {
@@ -124,91 +125,6 @@
   }
 }
 
-// .process {
-//   .banner {
-//     height: 100%;
-//     min-height: 100vh;
-//     background: url('../images/banner_bg.jpg') center center/cover no-repeat;
-//     @media #{$desktop__up} {
-//       background-position-x: -300px;
-//       background-position-y: 0;
-//     }
-//     @media #{$desktop} {
-//       background-position-x: -300px;
-//     }
-//     @media #{$tablet} {
-//       background-position-x: -350px;
-//     }
-//     @media #{$phablet} {
-//       height: auto;
-//       background-position-x: -450px;
-//     }
-//     @media #{$mobile} {
-//       background-position-x: -450px;
-//     }
-//     .thanks {
-//       @include make-sm-column(12);
-//     }
-//     .thanks_wrap {
-//       display: block;
-//       padding: $px_ten*3;
-//       margin-top: $px_ten*5;
-//       background-color: rgba(255, 255, 255, 0.6);
-//     }
-//     .site-title {
-//       padding: 0;
-//       line-height: normal;
-//       color: $color-primary;
-//       margin: 0 0 $px_fifteen;
-//       @include font-size(24px);
-//       font-weight: $font-weight-light;
-//       @media #{$tablet} {
-//         @include font-size(20px);
-//       }
-//       @media #{$phablet} {
-//         @include font-size(18px);
-//       }
-//     }
-//     .btn {
-//       color: $white;
-//       width: auto;
-//       height: auto;
-//       border: none;
-//       line-height: 1;
-//       box-shadow: none;
-//       text-align: center;
-//       margin-top: $px_ten*2;
-//       margin-right: $px_ten;
-//       border-radius: $px_four;
-//       @include font-size(16px);
-//       text-transform: uppercase;
-//       padding: $px_fifteen $px_ten*2;
-//       font-weight: $font-weight-regular;
-//       @media #{$phablet} {;
-//         margin-top: $px_ten;
-//         @include font-size(14px);
-//         padding: $px_ten $px_fifteen;
-//       }
-//       &.btn_previous {
-//         background: $orange;
-//         &:hover,
-//         &:active,
-//         &:focus {
-//           background: darken($orange, 15%);
-//         }
-//       }
-//       &.btn_website {
-//         background: $color-primary;
-//         &:hover,
-//         &:active,
-//         &:focus {
-//           background: darken($color-primary, 15%);
-//         }
-//       }
-//     }
-//   }
-// }
-
 .features {
   color: $white;
   background-color: $orange;
@@ -220,6 +136,7 @@
       border: 1px solid $white;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: right bottom;
       box-shadow: $px_two $px_two $px_two*2 $px_two*2 rgba(0, 0, 0, 0.1);
       @media #{$phablet} {
         margin: 0 0 $px_fifteen;
@@ -311,13 +228,24 @@
         position: absolute;
         left: $px_ten*3;
         right: $px_ten*3;
-        bottom: -$px_fifteen;
+        // bottom: -$px_fifteen;
         width: calc(100% - 60px);
+        @media #{$desktop__up} {
+          left: $px_ten*3.5;
+          right: $px_ten*2.5;
+          bottom: -220px;
+        }
+        @media #{$desktop} {
+          bottom: -106px;
+        }
+        @media #{$tablet} {
+          bottom: 30px;
+        }
         @media #{$phablet} {
           width: auto;
           margin: 0 auto;
           max-width: 200px;
-          bottom: -$px_ten*3;
+          bottom: -172px;
         }
       }
     }
@@ -717,7 +645,7 @@ footer {
     }
   }
   .phone {
-    margin-top: $px_ten*5;
+    margin-top: 48px;
     @include make-sm-column(4);
     @media #{$phablet} {
       margin-top: $px_ten*2;

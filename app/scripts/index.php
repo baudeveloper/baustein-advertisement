@@ -299,7 +299,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="phone"><a href="tel:6474305292">647 430 5292</a></div>
+                <div class="phone"><a href="tel:+16474305292">+1 647 430 5292</a></div>
                 <div class="copyright">
                     <p>Copyright © 2006 – 2017 Baustein Strategic Design Group Inc. All Rights Reserved.</p>
                 </div>
