@@ -109,35 +109,23 @@
     </header>
     <section class="features">
         <div class="container">
-            <div class="row equal">
-                <div class="feature-item"> <img class="thumb hidden" src="images/feature_first.jpg" alt="First Impressions Matter">
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <h2>First Impressions Matter</h2>
-                    </div>
-                    <div class="panel-body">
-                      <p>Potential clients form an opinion of your firm in less than 10 seconds based on the design of your brand and communication materials.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="feature-item"><img class="thumb hidden" src="images/feature_second.jpg" alt="Propel your ROI">
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <h2>Propel your ROI</h2>
-                    </div>
-                    <div class="panel-body">
-                      <p>75% of people judge the credibility of a business based on design. Research shows that every $100 invested in design generates $235 in company revenue<sup>*</sup>.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="feature-item link"><a class="panel" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
-                    <div class="panel-heading">
-                      <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="Get the Facts">
-                    </div>
-                    <div class="panel-body"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Facts">
-                      <p class="hidden">Testing paragraph</p>
-                    </div></a></div>
+          <div class="row equal">
+            <div class="feature-item"> <img class="thumb hidden" src="images/feature_first.jpg" alt="First Impressions Matter">
+              <div class="feature">
+                <h2>First Impressions Matter</h2>
+                <p>Potential clients form an opinion of your firm in less than 10 seconds based on the design of your brand and communication materials.</p>
+              </div>
             </div>
+            <div class="feature-item"><img class="thumb hidden" src="images/feature_second.jpg" alt="Propel your ROI">
+              <div class="feature">
+                <h2>Propel your ROI</h2>
+                <p>75% of people judge the credibility of a business based on design. Research shows that every &#36;100 invested in design generates &#36;235 in company revenue<sup>*</sup>.</p>
+              </div>
+            </div>
+            <div class="feature-item link">       <a class="feature" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
+                <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="Get the Facts"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Facts">
+                <p class="hidden">Testing paragraph</p></a></div>
+          </div>
         </div>
     </section>
     <section class="advertise">

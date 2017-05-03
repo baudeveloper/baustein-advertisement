@@ -137,60 +137,54 @@
   background-color: $orange;
   div[class^="feature"] {
     @include make-sm-column(4);
-    .panel {
+    .feature {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
       border-radius: 0;
+      padding: $px_ten*3;
       margin: $px_ten*6 0;
       border: 1px solid $white;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: right bottom;
       box-shadow: $px_two $px_two $px_two*2 $px_two*2 rgba(0, 0, 0, 0.1);
+      @media #{$desktop__up} {
+        height: 290px;
+      }
       @media #{$phablet} {
         margin: 0 0 $px_fifteen;
       }
     }
-    .panel-heading {
-      border: none;
-      background: none;
-      padding:$px_ten*3;
-      @media #{$desktop} {
-        margin: 0;
+    h2 {
+      padding: 0;
+      color: $white;
+      line-height: normal;
+      margin: 0 0 $px_ten*3;
+      @include font-size(22px);
+      font-weight: $font-weight-light;
+      @media #{$tablet} {
+        @include font-size(18px);
       }
-      @media #{$desktop__up} {
-        margin: 0 0 $px_ten*3;
-      }
-      h2 {
-        margin: 0;
-        color: $white;
-        line-height: normal;
-        @include font-size(22px);
-        font-weight: $font-weight-light;
-        @media #{$tablet} {
-          @include font-size(18px);
-        }
-        @media #{$phablet} {
-          @include font-size(16px);
-        }
+      @media #{$phablet} {
+        @include font-size(16px);
       }
     }
-    .panel-body {
-      padding: $px_ten*3;
+    p {
+      margin: 0;
+      padding: 0;
+      max-width: 85%;
+      // line-height: 1.4;
+      @include font-size(16px);
+      font-weight: $font-weight-regular;
       @media #{$phablet} {
-        padding: 0 $px_ten*3 $px_ten*3;
+        @include font-size(14px);
       }
-      p {
-        margin: 0;
-        max-width: 85%;
-        line-height: 1.4;
-        @include font-size(16px);
-        font-weight: $font-weight-regular;
-        @media #{$phablet} {
-          @include font-size(14px);
-        }
-        &::after,
-        &::before {
-          content: '';
-        }
+      &::after,
+      &::before {
+        content: '';
       }
     }
     @media #{$phablet} {
@@ -218,9 +212,12 @@
     }
   }
   .link {
-    .panel {
+    a {
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       position: relative;
+      padding: $px_ten*3;
       background-color: $sky_blue;
       h2, p {
         color: $grey !important;
@@ -243,7 +240,7 @@
           bottom: -220px;
         }
         @media #{$desktop} {
-          bottom: -106px;
+          bottom: -130px;
         }
         @media #{$tablet} {
           bottom: 30px;
