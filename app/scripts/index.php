@@ -163,7 +163,7 @@
           <div class="services_second">
             <ul>
               <li><img src="images/icons/extensive_experience.svg" alt="Extensive experience in corporate design"><span>Extensive design experience and a knowledgeable team</span></li>
-              <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at an affordable rate"><span>Access to an entire team of experts at affordable rate            </span></li>
+              <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at an affordable rate"><span>Access to an entire team of experts at an affordable rate            </span></li>
               <li><img src="images/icons/customized_billing.svg" alt="Customized and transparent billing model"><span>Customized and transparent billing model          </span></li>
               <li><img src="images/icons/honest_approach.svg" alt="Honest, reliable and confidential approach"><span>Honest, reliable and confidential approach </span></li>
             </ul>
@@ -196,8 +196,8 @@
           </div>
           <div class="row">
             <div class="col-sm-4">
-              <h2>Color Palette</h2>
-              <p>A strategically chosen color palette is often what really ties all your marketing materials together. Our designers will advise you on the proper color palette for your brand identity.</p>
+              <h2>Colour Palette</h2>
+              <p>A strategically chosen colour palette is often what really ties all your marketing materials together. Our designers will advise you on the proper colour palette for your brand identity.</p>
             </div>
             <div class="col-sm-4">
               <h2>Visual Language</h2>
@@ -354,8 +354,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact_group">
-                    <h2><span>To learn more about how </span><span>Baustein Design Group </span><span>can help meet your design objectives and grow your business.</span></h2>
-                    <h3>Please get in touch.</h3>
+                    <h2><span>To learn more about how </span><span>Baustein Strategic Design Group </span><span>can help meet your design objectives and grow your business. </span><span>Please get in touch.</span></h2>
                 </div>
                 <div class="contact_form">
                     <form id="form_contact" role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#form_contact" method="POST" name="form_contact"
