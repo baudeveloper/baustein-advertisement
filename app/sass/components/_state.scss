@@ -12,7 +12,8 @@ a {
 }
 
 // Input Color.
-input {
+input,
+textarea {
   outline: none;
   box-shadow: none !important;
 }
@@ -164,7 +165,7 @@ input {
 }
 
 // Validation styles.
-input {
+input, textarea {
   &.error {
     margin-bottom: $px_ten !important;
   }

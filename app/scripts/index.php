@@ -24,6 +24,9 @@
       if(isset($_POST['phone_number'])) :
         $phone_number = $_POST['phone_number'];
       endif;
+      if(isset($_POST['requirements'])) :
+        $requirements = $_POST['requirements'];
+      endif;
 
       // Regular Expressions
       if($human !== '7') :
@@ -48,9 +51,9 @@
       endif;
 
       if(!($formErrors) && $human === '7') :
-        $to = "tej@baustein.ca";
+        $to = "test@baustein.ca";
         $subject = "From $first_name -- Baustein Landing Page";
-        $message = "Name: ".$first_name." ".$last_name."\nCompany Name: ".$company_name."\nCompany Website: ".$company_website."\nEmail Address: ".$email_address."\nPhone Number: ".$phone_number;
+        $message = "Name: ".$first_name." ".$last_name."\nCompany Name: ".$company_name."\nCompany Website: ".$company_website."\nEmail Address: ".$email_address."\nPhone Number: ".$phone_number."\nMessage: ".$requirements;
         if(mail($to, $subject, $message)) :
           $msg = "Thanks, Your form has been submitted.";
         else:
@@ -101,30 +104,38 @@
                 <nav class="site-navigation" role="navigation"><a class="navigation__lets_talk" href="#contact__link">Let's Talk<img src="images/icons/lets_talk.svg" alt="Let's Talk"></a><a class="navigation__phone" href="tel:+16474305262">+1 647 430 5262</a></nav>
             </div>
             <div class="row">
-                <div class="site-banner">
-                    <h1 class="site-title">Build your Wealth Management Client Base. <span>Invest in <strong>Good Design</strong>.</span></h1>
-                </div>
+              <div class="site-banner">
+                <h1 class="site-title">Build Your Wealth Management Client Base <span>by Investing in  <strong>Good Design.</strong></span></h1>
+              </div>
             </div>
         </div>
     </header>
     <section class="features">
         <div class="container">
           <div class="row equal">
-            <div class="feature-item"> <img class="thumb hidden" src="images/feature_first.jpg" alt="First Impressions Matter">
+            <div class="feature-item"> 
               <div class="feature">
                 <h2>First Impressions Matter</h2>
-                <p>Potential clients form an opinion of your firm in less than 10 seconds based on the design of your brand and communication materials.</p>
+                <p>Clients form an opinion about your firm in less than 10 seconds based on the design of your brand identity, marketing materials, and digital presence.</p>
               </div>
             </div>
-            <div class="feature-item"><img class="thumb hidden" src="images/feature_second.jpg" alt="Propel your ROI">
+            <div class="feature-item">
               <div class="feature">
-                <h2>Propel your ROI</h2>
-                <p>75% of people judge the credibility of a business based on design. Research shows that every &#36;100 invested in design generates &#36;235 in company revenue<sup>*</sup>.</p>
+                <h2>Return On Investment</h2>
+                <p>Research shows that every $100 invested in strategic design generates $235 in company revenue. Good design engages your clients and builds your business.</p>
               </div>
             </div>
-            <div class="feature-item link">       <a class="feature" href="http://www.pdf995.com/samples/pdf.pdf" target="_blank">
-                <h2>Get the Facts</h2><img class="icon" src="images/icons/logo_pdf.svg" alt="Get the Facts"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Facts">
-                <p class="hidden">Testing paragraph</p></a></div>
+            <div class="feature-item link">       
+              <div class="feature">           
+                <h2>Get the Report           </h2>
+                <div class="item__row">
+                  <div class="item__column">
+                    <p>5 Things every Wealth Management Firm needs.</p>
+                  </div>
+                  <div class="item__column"><a href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf" target="_blank" title="Click here to get the Report"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Report"></a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     </section>
@@ -133,13 +144,184 @@
             <div class="row">
               <div class="advertise_heading">
                 <h2>A limited marketing budget does not mean limited access to good design.</h2>
-                <p>For roughly the same cost of a part-time designer, you can access an entire design team, each person specializing in different areas of design that will cover all of your company’s creative needs. Good design is imperative to the success of your business.</p>
+                <p>For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.</p>
               </div>
                 <div class="advertise_content"><img src="images/icons/animation_designer.svg" alt="Sole Graphic Designer" data-aos="fade-right" data-aos-delay="1000"><img src="images/icons/animation_arrow.svg" alt="Arrow" data-aos="fade-right" data-aos-delay="2000"><img src="images/icons/animation_roles.svg" alt="Roles of a Designer" data-aos="fade-right" data-aos-delay="3000"></div>
             </div>
         </div>
     </section>
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="services_heading">
+            <h2>Baustein Strategic Design Group</h2>
+            <p>
+               Baustein is a multi-disciplinary creative partner – a <span>‘one-stop-shop’ </span>for all your firms’ marketing and creative needs. We specialize in creating memorable brand identities and professional design solutions for all your online and print materials.        </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="services_second">
+            <ul>
+              <li><img src="images/icons/extensive_experience.svg" alt="Extensive experience in corporate design"><span>Extensive design experience and a knowledgeable team</span></li>
+              <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at an affordable rate"><span>Access to an entire team of experts at affordable rate            </span></li>
+              <li><img src="images/icons/customized_billing.svg" alt="Customized and transparent billing model"><span>Customized and transparent billing model          </span></li>
+              <li><img src="images/icons/honest_approach.svg" alt="Honest, reliable and confidential approach"><span>Honest, reliable and confidential approach </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="expertise">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active" role="presentation"><a href="#brand_development" aria-controls="brand_development" role="tab" data-toggle="tab">Brand Development</a></li>
+        <li role="presentation"><a href="#marketing" aria-controls="marketing" role="tab" data-toggle="tab">Marketing</a></li>
+        <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+        <li role="presentation"><a href="#digital" aria-controls="digital" role="tab" data-toggle="tab">Digital</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="brand_development" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Branding & Visual Identity</h2>
+              <p>We offer a range of creative solutions including naming, brand positioning and visual identity design.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Logo & Wordmark Design</h2>
+              <p>Our team of designers create appealing logos that will engage your target audiences. Your logo or wordmark is the core of your brand identity.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Typographic Treatments</h2>
+              <p>A great brand identity requires an equally strong family of fonts that will work well across all print and digital media. </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Color Palette</h2>
+              <p>A strategically chosen color palette is often what really ties all your marketing materials together. Our designers will advise you on the proper color palette for your brand identity.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Visual Language</h2>
+              <p>We help you create the proper visual language for your band voice. This may include iconography, photographic imagery, and other graphic elements.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Brand Guidelines</h2>
+              <p>Your brand guidelines define the use of your brand elements and creates a unified brand message across all channels and media.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="marketing" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Marketing Strategy</h2>
+              <p>Our team of strategists can help you identify the your ideal types of clients and define the proper activities and tactics to reach them.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Content Marketing</h2>
+              <p>Great content marketing leads to higher visibility in search engines, more referral traffic to your website, more leads, and increased client acquisitions.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Lead Generation</h2>
+              <p>We can help you create print and digital based lead generation campaigns to reach your target audiences and build your sales pipeline.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Social Media Strategy</h2>
+              <p>Baustein can help you make sure that your social media activities and presence delivers the right message to your target clients.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Email Marketing</h2>
+              <p>We can help you create engaging email campaigns that generate leads, conversions, and new clients for your wealth management firm.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Video Marketing</h2>
+              <p>Research shows that video can help increase conversion by 80%. We offer a complete video solution from concept development, to filming, post-production, and marketing.     </p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="design" role="tabpanel"> 
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Marketing Collateral</h2>
+              <p>Our design team creates marketing materials that will properly communicate your brand messages and build your business.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Corporate Brochures</h2>
+              <p>Baustein can design and manage the print production of corporate and fund brochures that will engage your clients.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Presentations</h2>
+              <p>Our design team can help you create professional presentations to pitch or funds and investment scenarios to your clients.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Factsheets</h2>
+              <p>Build your brand by communicating your fund information to your clients in a visually appealing way.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Investor Reports</h2>
+              <p>Good design can help you communicate your messages and value to current and potential investors.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Annual Reports</h2>
+              <p>Our design team can design and produce your print and digital annual reports. </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Newsletters</h2>
+              <p>Newsletters can be an effective way of staying in touch with your clients. Baustein can design the proper newsletter concept for your firm and help manage the delivery to your target audiences.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Print Ads</h2>
+              <p>Baustein can work with you to design print ad campaigns to target investors and channel partners.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Infographics</h2>
+              <p>We can design visually appealing infographics to clearly communicate key information and strategies to your clients and target audiences.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Photography</h2>
+              <p>Baustein’s photography solutions cover all requirements from stock photography to custom created imagery. We will find the right solution for your brand and budget.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Video</h2>
+              <p>Baustein provides a complete video design, filming, editing, production, and delivery solution that can enhance your communications with your customers.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>Website</h2>
+              <p>Our modern, mobile friendly websites are designed to properly communicate your brand messages across all devices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="digital" role="tabpanel">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>Website Design & Build</h2>
+              <p>Our modern, mobile friendly websites are designed to properly communicate your brand messages across all devices.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>SEO</h2>
+              <p>Our team will design the proper search engine optimisation program to increase your visibility and traffic from the leading search engines used by your target audiences.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>SEM</h2>
+              <p>Baustein can help create, design, and implement the proper online advertising campaigns to reach your target audiences as they use search engines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <hr class="divider">
+    </div>
     <section class="portfolio">
+      <div class="container">
+            <h2>Trusted by International Wealth Management Firms</h2>
+        </div>
       <div class="tab_wrap">
         <ul class="nav nav-tabs" id="portfolio_tab" data-tabs="tabs">
           <li class="portfolio-item"><a class="item_first" data-toggle="tab" href="#portfolio_first"><img class="hidden" src="images/project_first.jpg" alt="AFL Investments Limited"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
@@ -168,48 +350,12 @@
         </div>
       </div>
     </section>
-    <section class="services">
-      <div class="container">
-        <div class="row">
-          <div class="services_heading">
-            <h2>
-               Baustein is a multi-disciplinary creative partner – a <span>‘one-stop-shop’ </span>for all your firms’ marketing and creative needs. We specialize in creating memorable brand identities and professional design solutions for all your online and print materials.</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="services_first">
-            <p>Specialized Services</p>
-            <ul>
-              <li> <img src="images/icons/brand_development.svg" alt="Brand Development"><span>Brand Development            </span></li>
-              <li><img src="images/icons/annual_report_design.svg" alt="Annual Report Design"><span>Annual Report Design          </span></li>
-              <li><img src="images/icons/website_design.svg" alt="Website Design"><span>Website Design         </span></li>
-              <li><img src="images/icons/sales_material_design.svg" alt="Sales Material Design"><span>Sales Material Design         </span></li>
-              <li><img src="images/icons/content_development.svg" alt="Content Development"><span>Content Development          </span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="services_second">
-            <p>Truly Compelling Arguments</p>
-            <ul>
-              <li><img src="images/icons/extensive_experience.svg" alt="Extensive experience in corporate design"><span>Extensive experience in corporate design</span></li>
-              <li><img src="images/icons/access_to_team.svg" alt="Access to an entire team at an affordable rate"><span>Access to an entire team at an affordable rate          </span></li>
-              <li><img src="images/icons/timely_execution.svg" alt="Timely execution of your urgent projects"><span>Timely execution of your urgent projects            </span></li>
-              <li><img src="images/icons/customized_billing.svg" alt="Customized and transparent billing model"><span>Customized and transparent billing model            </span></li>
-              <li><img src="images/icons/impressive_list.svg" alt="Impressive list of premium design services"><span>Impressive list of premium design services          </span></li>
-              <li><img src="images/icons/honest_approach.svg" alt="Honest, reliable and confidential approach"><span>Honest, reliable and confidential approach    </span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="contact" id="contact__link">
         <div class="container">
             <div class="row">
                 <div class="contact_group">
-                    <h2>Get Started.</h2>
-                    <h3>Let’s talk about how design can help grow your business.</h3>
-                    <p>I would like to book a conference call to discuss my wealth management firm’s needs.</p>
+                    <h2><span>To learn more about how </span><span>Baustein Design Group </span><span>can help meet your design objectives and grow your business.</span></h2>
+                    <h3>Please get in touch.</h3>
                 </div>
                 <div class="contact_form">
                     <form id="form_contact" role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#form_contact" method="POST" name="form_contact"
@@ -257,6 +403,9 @@
                               endif;
                             ?>
                         </div>
+                        <div class="form-group">
+                          <textarea id="requirements" name="requirements" placeholder="Tell us about your requirements."></textarea>
+                        </div>
                         <div class="form-group filled">
                           <label for="human">What is 5+2? (Anti-Spam)</label>
                           <input type="text" name="human" placeholder="Type your answer...">
@@ -299,6 +448,7 @@
     <script src="vendor/js/aos.js"></script>
     <script src="vendor/js/jquery.validate.min.js"></script>
     <script src="vendor/js/additional-methods.min.js"></script>
+    <script src="vendor/js/jquery.ns-autogrow.min.js"></script>
     <script src="js/custom.min.js"></script>
 </body>
 

@@ -20,6 +20,7 @@
     "jquery": "^1.11.3",
     "html5shiv": "^3.7.3",
     "aos": "^2.1.1",
-    "jquery-validation": "^1.16.0"
+    "jquery-validation": "^1.16.0",
+    "jquery.ns-autogrow": "^1.1.6"
   }
 }

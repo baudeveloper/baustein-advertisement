@@ -2,11 +2,11 @@ $(function() {
 
   AOS.init();
 
-  var feature = $('.feature-item');
-  feature.each(function(idx, li) {
-      var featureThumb = $(this).find('.thumb').attr('src');
-      $(this).find('.feature').css('background-image', 'url(' + featureThumb + ')');
-  });
+  // var feature = $('.feature-item');
+  // feature.each(function(idx, li) {
+  //     var featureThumb = $(this).find('.thumb').attr('src');
+  //     $(this).find('.feature').css('background-image', 'url(' + featureThumb + ')');
+  // });
 
   var project = $('.portfolio-item');
   project.each(function(idx, li) {
@@ -19,6 +19,8 @@ $(function() {
     $(this).parent().removeClass('active');
     $(this).closest('.tab-content').siblings('#portfolio_tab').find('li.active').removeClass('active');
   });
+
+  $('textarea').autogrow({ vertical: true, horizontal: false });
 
   $('#form_contact').validate({
     rules: {
