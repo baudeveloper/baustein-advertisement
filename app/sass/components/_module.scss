@@ -4,11 +4,12 @@
 }
 #portfolio_tab {
   width: 100%;
-  display: flex;
-  overflow: hidden;
   margin: 0;
-  padding: 0;
-  border-bottom: none;
+  padding: 0; 
+  display: flex; 
+  overflow: hidden;
+  border: none;
+  background-color: $white;
   > li {
     flex: 1;
     height: 500px;
