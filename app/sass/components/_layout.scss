@@ -21,14 +21,3 @@ html, body {
     width: $container-lg;
   }
 }
-
-// Declaration of Row
-.stack {
-  @include make-row();
-}
-
-// Declaration of Column
-.block-12 {
-  @include make-xs-column(12);
-  @include make-sm-column(12);
-}

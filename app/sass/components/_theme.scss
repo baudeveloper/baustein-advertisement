@@ -1,28 +1,11 @@
 // Styles
 
 .banner {
-  position: relative;
   height: 450px;
+  position: relative;
   background-position: 50% 0%;
   background-origin: content-box;
-  background: url('../images/banner_bg.jpg') center center/cover no-repeat;
-  @media #{$desktop__up} {
-    background-position-x: center;
-    background-position-y: 0;
-  }
-  @media #{$desktop} {
-    background-position-x: -170px;
-  }
-  @media #{$tablet} {
-    background-position-x: -170px;
-  }
-  @media #{$phablet} {
-    height: auto;
-    background-position-x: 0;
-  }
-  @media #{$mobile} {
-    background-position-x: -100px;
-  }
+  background: url('../images/banner_bg.jpg') center center/cover no-repeat;  
   .container {
     position: relative;
     z-index: 2;
@@ -66,11 +49,11 @@
       }
       @media #{$phablet} {
         margin-left: $px_ten;
-        &:first-child {
-          margin-left: 0;
-        }
         img {
           width: $px_ten*2;
+        }
+        &:first-child {
+          margin-left: 0;
         }
       }
     }
@@ -85,12 +68,14 @@
     .site-title {
       margin-top: $px_ten*12;
       color: $color-primary;
-      @include font-size(34px);
+      @include font-size(32px);
       font-weight: $font-weight-light;
       span {
-        display: block;
         strong {
           font-weight: $font-weight-medium;
+        }
+        @media #{$tablet__up} {
+          display: inline;
         }
         @media #{$tablet} {
           display: inline;
@@ -98,6 +83,9 @@
         @media #{$phablet} {
           display: inline;
         }
+      }
+      @media #{$desktop} {
+        @include font-size(24px);
       }
       @media #{$tablet} {
         @include font-size(28px);
@@ -131,47 +119,70 @@
       }
     }
   }
-}
-
-.divider {
-  margin:0;
-  padding:0;
-  border-color:#ccc;
+  @media #{$desktop__up} {
+    background-position-x: center;
+    background-position-y: 0;
+  }
+  @media #{$desktop} {
+    background-position-x: -$px_ten*10;
+  }
+  @media #{$tablet} {
+    background-position-x: -$px_ten*12;
+  }
+  @media #{$phablet} {
+    height: auto;
+    background-position-x: 0;
+  }
+  @media #{$mobile} {
+    background-position-x: -$px_ten*5;
+  }
 }
 
 .features {
   color: $white;
-  background-color: $orange;
+  background-color: $orange_light;
   background-image: url('../images/wood_pattern.jpg');
   background-repeat: repeat;
-  div[class^="feature"] {
+  div[class^="feature-"] {
+    margin: $px_ten*6 0;
     @include make-sm-column(4);
-    .feature {
-      display: flex;
-      flex-flow: column nowrap;
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-      padding: 0 0 $px_ten*3;
-      margin: $px_ten*6 0;
-      border-right: 1px solid $white;
-      @media #{$phablet__up} {
-        padding: 0;
+    border-right: 1px solid $white;     
+    &:last-child {
+      border-right: none;
+    }
+    @media #{$phablet} {
+      margin: $px_ten*2 0;
+      border-right: none;
+      border-bottom: 1px solid $white;     
+      &:last-child {
+        border-bottom: none;
       }
-      @media #{$phablet} {
-        display: block;
-        flex-flow: inherit;
-        margin: 0 0 $px_fifteen;
-        border-right: none;
-        border-bottom: 1px solid $white;
-      }
+    }
+  }  
+  .feature {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 0 0 $px_ten*3;      
+    @media #{$phablet__up} {
+      padding: 0;
+      text-align: center;
+    }
+    @media #{$phablet} {
+      display: block;
+      flex-flow: inherit;
+      margin: 0 0 $px_fifteen;
+      padding: 0;
     }
     h2 {
       padding: 0;
       color: $white;
       line-height: normal;
-      margin: 0 0 $px_ten*3;
-      @include font-size(22px);
+      margin: 0 0 $px_ten*2;
+      @include font-size(20px);
       font-weight: $font-weight-medium;
       @media #{$tablet} {
         @include font-size(18px);
@@ -183,12 +194,11 @@
     }
     p {
       margin: 0;
-      padding: 0 30px 0 0;
-      // max-width: 85%;
-      // line-height: 1.4;
-      @include font-size(16px);
+      padding: 0 15px;
+      @include font-size(14px);
       font-weight: $font-weight-regular;
       @media #{$phablet} {
+        padding: 0;
         @include font-size(14px);
       }
       &::after,
@@ -196,69 +206,39 @@
         content: '';
       }
     }
-    &:last-child {
-      .feature {
-        border-right: none;
-      }
-    }
-    @media #{$phablet} {
-      .feature {
-        padding-bottom: $px_fifteen;
-      }
-      &:first-child {
-        .feature {
-          margin-top: 25px;
-        }
-      }
-      &:last-child {
-        .feature {
-          padding-bottom: 0; 
-          border-bottom: none;
-        }
-      }
-    }
-  }  
+  }   
   .link {
-    > div {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      padding: $px_ten*3;
-      .item__row {
-        padding: 0;
-        width: 100%;
-        display: block;
-        .item__column {
-          width: 50%;
-          float: left;
-          @media #{$tablet} {
-            width: 100%;
-            float: none;
-          }
-        }
-      }      
-      p {
+    a {
+      display: inline-block;
+      width: 150px;
+      height: 42px;
+      text-align: left;
+      padding-left: 30px;
+      line-height: 40px;
+      border-radius: $px_four;
+      background-color: $blue;
+      border: 1px solid $blue_dark;
+      -webkit-box-shadow: inset 1px 1px 2px 2px rgba(84,125,161,.5);
+      -moz-box-shadow: inset 1px 1px 2px 2px rgba(84,125,161,.5);
+      box-shadow: inset 1px 1px 2px 2px rgba(84,125,161,.5);
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      span {
         color: $white;
-        @media #{$tablet__up} {
-          padding-right: $px_ten*2;
-        }
-        @media #{$tablet} {
-          margin-bottom: $px_ten*2;
-        }
+        margin-left: 10px;
+        text-transform: uppercase;
+        @include font-size(14px);
       }
+    }      
+    p {
+      color: $white;
+      margin-bottom: $px_ten;
       @media #{$tablet__up} {
-        .child_thumb {
-          width: 65px;
+        span {
+          display: block;
         }
-      }
-      @media #{$tablet} {
-        .child_thumb {
-          width: 80px;
-        }
-      }
-      @media #{$phablet} {
-        margin: $px_fifteen 0 $px_fifteen*2 !important;
       }
     }
   }
@@ -297,7 +277,7 @@
     padding: 0;
     line-height: normal;
     color: $color-primary;
-    @include font-size(28px);
+    @include font-size(26px);
     font-weight: $font-weight-light;
     margin: 0 0 $px_ten*3;
     @media #{$phablet} {
@@ -310,7 +290,7 @@
     padding: 0;
     color: $grey;
     line-height: 1.5;
-    @include font-size(18px);
+    @include font-size(16px);
     font-weight: $font-weight-regular;
     @media #{$tablet} {
       margin: 0 0 $px_ten*2;
@@ -323,6 +303,9 @@
   img {
     display: inline-block;
     &:first-child {
+      @media #{$desktop__up} {
+        width: 183px;
+      }
       @media #{$desktop} {
         width: 193px;
       }
@@ -332,6 +315,9 @@
     }
     &:first-child + img {
       width: 65px;
+      @media #{$desktop__up} {
+        width: 55px;
+      }
       @media #{$desktop} {
         width: 50px;
       }
@@ -341,6 +327,9 @@
     }
     &:last-child {
       margin-left: $px_ten;
+      @media #{$desktop__up} {
+        width: 212px;
+      }
       @media #{$desktop} {
         width: 222px;
       }
@@ -358,76 +347,84 @@
     line-height: normal;
     color: $color-primary;
     margin: $px_ten*5 0;
-    @include font-size(28px);
+    @include font-size(24px);
     font-weight: $font-weight-medium;
     @media #{$tablet} {
-      @include font-size(24px);
+      @include font-size(20px);
     }
     @media #{$phablet} {
-      @include font-size(20px);
+      @include font-size(18px);
       margin: $px_ten*2 0;
     }
   }
 }
 
 .expertise {  
-  .nav-tabs {
-    text-align: center;
-    margin-top: -51px;
+  .nav-tabs__bg {
+    background-color: #f2f2f2;
+  }
+  .nav-tabs {       
+    @extend .container;    
     > li {
-      float: none;
-      display: inline-block;
-      zoom: 1;
+      @include make-xs-column(6);
+      @include make-sm-column(6);
+      @include make-md-column(3);
+      padding-left: 0;
+      padding-right: 0;
       a {
-        color: $white;
-        border: none;
-        background: none;
-        @include font-size(20px);
-        font-weight: $font-weight-bold;
-        border-bottom: $px_three solid transparent;
-        &:hover,
-        &:active,
-        &:focus {
-          border: none;
-          background: none;
-          border-bottom: $px_three solid transparent;
-        }        
+        border-radius: 0;
+        border-color: $grey_dark;
+        color: $grey;  
+        margin-right: -1px; 
+        text-align: center;
+        word-wrap: break-word;
+        font-weight: $font-weight-regular;
+        &:hover, &:focus {
+          border: 1px solid $grey_dark;
+        }
       }
       &.active {
+        background: $white;
         a {
-          color: $orange;
-          border: none;
-          background: none;
-          border-bottom: $px_three solid $orange;
-          &:hover,
-          &:active,
-          &:focus {
-            border: none;
-            background: none;
-            border-bottom: $px_three solid $orange;
+          color: $orange;       
+          font-weight: $font-weight-medium;
+          @media #{$tablet__up} {
+            border-bottom-color: $white;   
           }
         }
       }      
     }
-    @media #{$phablet} {
-      margin-top: -29px;
+    @media #{$tablet} {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      > li {
+        &.active {
+          background: transparent;
+        }  
+      } 
+    }
+    @media #{$phablet} {            
       > li {
         a {
-          padding: 0 0 $px_five;
-          margin-right: $px_ten;
-          @include font-size(12px);
+          padding: 15px 0;
+          overflow: hidden;
+          @include font-size(14px);
         }   
+        &.active {
+          background: transparent;
+        }  
       }      
     }
   }
   h2 {
     margin: 0;
     padding: 0 0 $px_ten;
-    color: $blue;
+    color: $orange;
     @include font-size(16px);
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-regular;
   }
   p {
+    color: $grey;
     @include font-size(14px);
   }
   div[class^="col"] {
@@ -446,9 +443,8 @@
       margin-bottom: 0;
     }
     h2 {
-      margin: $px_ten 0 $px_five;
       padding: 0;
-      color: $blue;
+      margin: $px_ten 0;
       font-weight: $font-weight-medium;      
     }    
   }
@@ -458,9 +454,8 @@
   color: $white;
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
-  background-position: 50% 0%;
   background-origin: content-box;
-  background: url('../images/services_bg.jpg') center center/cover no-repeat;
+  background: url('../images/services_bg.jpg') center bottom/cover no-repeat;
   @media #{$phablet} {
     padding-top: $px_ten*3;
     padding-bottom: $px_ten*3;
@@ -474,7 +469,7 @@
     padding: 0;
     color: $white;
     line-height: normal;
-    @include font-size(28px);
+    @include font-size(24px);
     font-weight: $font-weight-medium;    
     @media #{$phablet} {
       @include font-size(18px);
@@ -518,41 +513,6 @@
       }
     }
   }
-  .services_second {
-    margin-bottom: $px_ten*3;
-    color: $orange !important;
-    @include make-sm-column(12);
-    li {
-      @include make-xs-column(6);
-      @include make-sm-column(3);
-    }
-    img {
-      width: auto;
-      height: 65px;
-      @media #{$desktop} {
-        height: 60px;
-      }
-      @media #{$tablet} {
-        height: 55px;
-      }
-      @media #{$phablet} {
-        height: 50px;
-      }
-    }
-    p {
-      @include font-size(20px);
-      @media #{$phablet} {
-        @include font-size(14px);
-      }
-    }
-    span {
-      word-wrap: break-word;
-      @include font-size(18px);
-      @media #{$phablet} {
-        @include font-size(14px);
-      }
-    }
-  }
   .services_heading {
     p {
       color: $white;
@@ -566,11 +526,39 @@
       }
     }
   }
+  .services_second {
+    color: $orange !important;
+    @include make-sm-column(12);
+    li {
+      @include make-xs-column(6);
+      @include make-sm-column(3);
+    }
+    img {
+      width: auto;
+      height: 50px;
+      @media #{$desktop} {
+        height: 40px;
+      }
+      @media #{$tablet} {
+        height: 40px;
+      }
+      @media #{$phablet} {
+        height: 40px;
+      }
+    }
+    span {
+      color: $white;
+      word-wrap: break-word;
+      @include font-size(14px);
+    }
+  }
 }
 
 .contact {
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
+  background-repeat: repeat;
+  background-image: url('../images/light_pattern.png');
   @media #{$phablet} {
     padding-top: $px_ten*3;
     padding-bottom: $px_ten*3;
@@ -591,13 +579,13 @@
     line-height: normal;
     color: $color-primary;
     margin: 0 0 $px_ten*3;
-    @include font-size(28px);
+    @include font-size(26px);
     font-weight: $font-weight-medium;
     @media #{$tablet} {
-      @include font-size(24px);
+      @include font-size(22px);
     }
     @media #{$phablet} {
-      @include font-size(20px);
+      @include font-size(18px);
       margin: 0 0 $px_ten*2;
     }
     span {
@@ -723,11 +711,16 @@
 
 footer {
   color: $white;
+  // min-height: 495px;
   padding-top: $px_ten*6;
   padding-bottom: $px_ten*6;
-  background-color: $grey_light;
+  background-color: #444;
+  background-image: url('../images/cntower.jpg');
+  background-position: center center;
+  background-repeat: no-repeat; 
   @media #{$phablet} {
     text-align: center;
+    background-position: 20% center;
   }
   p {
     line-height: normal;
@@ -741,6 +734,9 @@ footer {
     @include make-sm-column(3);
     @include make-md-column(4);
     @include make-lg-column(5);
+    @media #{$desktop__up} {
+      padding-left: 30px;
+    }
     @media #{$phablet} {
       margin-top: $px_ten*3;
       margin-bottom: $px_ten*3;

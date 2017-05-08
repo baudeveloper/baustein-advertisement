@@ -96,48 +96,41 @@
 
 <body class="home">
     <header class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="site-logo">
-                    <a href="http://baustein.ca" target="_blank" title="Visit Baustein Strategic Design Group Inc."><img src="images/logo.png" alt="Baustein Strategic Design Group Inc."></a>
-                </div>
-                <nav class="site-navigation" role="navigation"><a class="navigation__lets_talk" href="#contact__link">Let's Talk<img src="images/icons/lets_talk.svg" alt="Let's Talk"></a><a class="navigation__phone" href="tel:+16474305262">+1 647 430 5262</a></nav>
-            </div>
-            <div class="row">
-              <div class="site-banner">
-                <h1 class="site-title">Build Your Wealth Management Client Base <span>by Investing in  <strong>Good Design.</strong></span></h1>
-              </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="site-logo"><a href="http://baustein.ca" target="_blank" title="Visit Baustein Strategic Design Group Inc."><img src="images/logo.png" alt="Baustein Strategic Design Group Inc."></a></div>
+          <nav class="site-navigation" role="navigation"><a class="navigation__lets_talk" href="#contact__link">Let's Talk<img src="images/icons/lets_talk.svg" alt="Let's Talk"></a><a class="navigation__phone" href="tel:+16474305262">+1 647 430 5262</a></nav>
         </div>
+        <div class="row">
+          <div class="site-banner">
+            <h1 class="site-title">Build Your Wealth Management Client Base <span>by Investing in  <strong>Good Design.</strong></span></h1>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="features">
-        <div class="container">
-          <div class="row equal">
-            <div class="feature-item"> 
-              <div class="feature">
-                <h2>First Impressions Matter</h2>
-                <p>Clients form an opinion about your firm in less than 10 seconds based on the design of your brand identity, marketing materials, and digital presence.</p>
-              </div>
+      <div class="container">
+        <div class="row equal">
+          <div class="feature-item"> 
+            <div class="feature">
+              <h2>First Impressions Matter</h2>
+              <p>Clients form an opinion about your firm in less than 10 seconds based on the design of your brand identity, marketing materials, and digital presence.</p>
             </div>
-            <div class="feature-item">
-              <div class="feature">
-                <h2>Return On Investment</h2>
-                <p>Research shows that every $100 invested in strategic design generates $235 in company revenue. Good design engages your clients and builds your business.</p>
-              </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature">
+              <h2>Return On Investment</h2>
+              <p>Research shows that every $100 invested in strategic design generates $235 in company revenue. Good design engages your clients and builds your business.</p>
             </div>
-            <div class="feature-item link">       
-              <div class="feature">           
-                <h2>Get the Report           </h2>
-                <div class="item__row">
-                  <div class="item__column">
-                    <p>5 Things every Wealth Management Firm needs.</p>
-                  </div>
-                  <div class="item__column"><a href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf" target="_blank" title="Click here to get the Report"><img class="child_thumb" src="images/icons/logo_report.svg" alt="Get the Report"></a></div>
-                </div>
-              </div>
+          </div>
+          <div class="feature-item link">       
+            <div class="feature">           
+              <h2>Get the Report</h2>
+              <p>5 Things every <span>Wealth Management Firm needs.</span></p><a href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf" target="_blank" title="Click here to get the Report"><img src="images/icons/logo_pdf.svg" alt="Get the Report"><span>Report</span></a>
             </div>
           </div>
         </div>
+      </div>
     </section>
     <section class="advertise">
         <div class="container">
@@ -324,9 +317,9 @@
         </div>
       <div class="tab_wrap">
         <ul class="nav nav-tabs" id="portfolio_tab" data-tabs="tabs">
-          <li class="portfolio-item"><a class="item_first" data-toggle="tab" href="#portfolio_first"><img class="hidden" src="images/project_first.jpg" alt="AFL Investments Limited"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
-          <li class="portfolio-item"><a class="item_second" data-toggle="tab" href="#portfolio_second"><img class="hidden" src="images/project_second.jpg" alt="NexGen Financial Corporation"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
-          <li class="portfolio-item"><a class="item_third" data-toggle="tab" href="#portfolio_third"><img class="hidden" src="images/project_third.jpg" alt="Cidel Group"><span>See More<i class="fa fa-chevron-down" aria-hidden="true"></i></span></a></li>
+          <li class="portfolio-item"><a class="item_first" data-toggle="tab" href="#portfolio_first"><img class="hidden" src="images/project_first.jpg" alt="AFL Investments Limited"><span><img src="images/icons/logo_more.svg" alt="See more"></span></a></li>
+          <li class="portfolio-item"><a class="item_second" data-toggle="tab" href="#portfolio_second"><img class="hidden" src="images/project_second.jpg" alt="NexGen Financial Corporation"><span><img src="images/icons/logo_more.svg" alt="See more"></span></a></li>
+          <li class="portfolio-item"><a class="item_third" data-toggle="tab" href="#portfolio_third"><img class="hidden" src="images/project_third.jpg" alt="Cidel Group"><span><img src="images/icons/logo_more.svg" alt="See more"></span></a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane" id="portfolio_first">

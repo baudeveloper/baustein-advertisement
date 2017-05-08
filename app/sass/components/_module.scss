@@ -1,0 +1,134 @@
+// Tab styles.
+.tab_wrap {
+  background-color: $grey;
+}
+#portfolio_tab {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  > li {
+    flex: 1;
+    height: 500px;
+    flex-direction: column;
+    @media #{$desktop} {
+      height: 400px;
+    }
+    @media #{$tablet} {
+      height: 300px;
+    }
+    @media #{$phablet} {
+      height: 200px;
+    }
+    > a {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      border-radius: 0;
+      line-height: normal;
+      background-size: cover;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      &:hover,
+      &:active,
+      &:focus {
+        &::before {
+          position: absolute;
+          content: '';
+          z-index: 5;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(245, 130, 32, 0.6);
+        }
+      }
+      span {
+        position: absolute;
+        z-index: 6;        
+        left: 0;
+        right: 0;        
+        bottom: $px_fifteen;
+        color: $black;
+        text-align: center;
+        @include font-size(12px);
+        text-transform: uppercase;
+        // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+        .fa {
+          margin-left: $px_five;
+        }
+      }
+    }
+  }
+}
+.tab-content {
+  position: relative;
+  @extend .container;
+  .tab-pane {
+    margin-top: $px_ten*5;
+    margin-bottom: $px_ten*3;
+    @media #{$phablet} {
+      margin-top: $px_ten*2;
+      margin-bottom: $px_ten*2;
+    }
+  }
+  .portfolio_sidebar {
+    @include make-sm-column(4);
+    span {
+      color: $white;
+      margin-bottom: $px_ten;
+      @include font-size(14px);
+    }
+    .client_name {
+      margin-bottom: 0;
+      display: inline-block;
+      font-weight: $font-weight-regular;
+    }
+    .client_location {
+      display: block;
+      font-weight: $font-weight-regular;
+      &::before {
+        content: "—";
+        color: $orange_dark;
+        margin-right: $px_five;
+      }
+    }
+    .client_services {
+      display: block;
+      font-weight: $font-weight-bold;
+    }
+    .client_tags {
+      display: block;
+      font-style: italic;
+      font-weight: $font-weight-regular;
+      &::before {
+        content: "•";
+        color: $orange_dark;
+        margin-right: $px_five;
+      }
+    }
+  }
+  .portfolio_gallery {
+    @include make-sm-column(8);
+    img {
+      width: 100%;
+    }
+  }
+  .close {
+    opacity: 1;
+    color: $white;
+    font-weight: 100;
+    position: absolute;
+    top: -$px_five;
+    right: $px_fifteen;
+    @include font-size(48px);
+  }
+}

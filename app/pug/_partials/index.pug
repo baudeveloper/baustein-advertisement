@@ -28,13 +28,13 @@ section.features
           p Research shows that every $100 invested in strategic design generates $235 in company revenue. Good design engages your clients and builds your business.
       .feature-item.link        
         .feature            
-          h2 Get the Report           
-          .item__row
-            .item__column
-              p 5 Things every Wealth Management Firm needs.
-            .item__column
-              a(href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf", target="_blank", title="Click here to get the Report")
-                img.child_thumb(src="images/icons/logo_report.svg", alt="Get the Report")                            
+          h2 Get the Report
+          p
+            | 5 Things every 
+            span Wealth Management Firm needs.
+          a(href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf", target="_blank", title="Click here to get the Report")
+            img(src="images/icons/logo_pdf.svg", alt="Get the Report")
+            span Report
 section.advertise
   .container
     .row
@@ -70,15 +70,16 @@ section.services
             img(src="images/icons/honest_approach.svg", alt="Honest, reliable and confidential approach")
             span Honest, reliable and confidential approach 
 section.expertise
-  ul.nav.nav-tabs(role='tablist')
-    li.active(role='presentation')
-      a(href='#brand_development', aria-controls='brand_development', role='tab', data-toggle='tab') Brand Development
-    li(role='presentation')
-      a(href='#marketing', aria-controls='marketing', role='tab', data-toggle='tab') Marketing
-    li(role='presentation')
-      a(href='#design', aria-controls='design', role='tab', data-toggle='tab') Design
-    li(role='presentation')
-      a(href='#digital', aria-controls='digital', role='tab', data-toggle='tab') Digital
+  .nav-tabs__bg    
+    ul.nav.nav-tabs(role='tablist')
+      li.active(role='presentation')
+        a(href='#brand_development', aria-controls='brand_development', role='tab', data-toggle='tab') Brand Development
+      li(role='presentation')
+        a(href='#marketing', aria-controls='marketing', role='tab', data-toggle='tab') Marketing
+      li(role='presentation')
+        a(href='#design', aria-controls='design', role='tab', data-toggle='tab') Design
+      li(role='presentation')
+        a(href='#websites', aria-controls='websites', role='tab', data-toggle='tab') Websites
   .tab-content
     #brand_development.tab-pane.active(role='tabpanel')
       .row
@@ -163,7 +164,7 @@ section.expertise
         .col-sm-4
           h2 Website
           p Our modern, mobile friendly websites are designed to properly communicate your brand messages across all devices.
-    #digital.tab-pane(role='tabpanel')
+    #websites.tab-pane(role='tabpanel')
       .row
         .col-sm-4
           h2 Website Design & Build
@@ -185,20 +186,17 @@ section.portfolio
         a.item_first(data-toggle='tab', href='#portfolio_first')
           img.hidden(src="images/project_first.jpg", alt="AFL Investments Limited")
           span
-            | See More
-            i.fa.fa-chevron-down(aria-hidden="true")
+            img(src="images/icons/logo_more.svg", alt="See more")
       li.portfolio-item
         a.item_second(data-toggle='tab', href='#portfolio_second')
           img.hidden(src="images/project_second.jpg", alt="NexGen Financial Corporation")
           span
-            | See More
-            i.fa.fa-chevron-down(aria-hidden="true")
+            img(src="images/icons/logo_more.svg", alt="See more")
       li.portfolio-item
         a.item_third(data-toggle='tab', href='#portfolio_third')
           img.hidden(src="images/project_third.jpg", alt="Cidel Group")
           span
-            | See More
-            i.fa.fa-chevron-down(aria-hidden="true")
+            img(src="images/icons/logo_more.svg", alt="See more")
     .tab-content
       #portfolio_first.tab-pane
         .row
@@ -244,23 +242,32 @@ section.contact#contact__link
           span Please get in touch.
       .contact_form          
         form#form_contact(role="form", action="", method="POST", name="form_contact")
-          .form-group
-            input.fill(type="text", name="first_name", placeholder="First Name", id="first_name", required)
-          .form-group
-            input.fill(type="text", name="last_name", placeholder="Last Name", id="last_name", required)
-          .form-group
-            input.fill(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
-          .form-group
-            input.fill(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
-          .form-group
-            input.fill(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
-          .form-group
-            input(type="text", name="phone_number", placeholder="Phone Number e.g. 123-123-1234 (Optional)", id="phone_number", maxlength="12")
-          .form-group
-            textarea#requirements(name="requirements", placeholder="Tell us about your requirements.")
-          .form-group.filled
-            label(for="human") What is 5+2? (Anti-Spam)
-            input(type="text", name="human", placeholder="Type your answer...")
+          .row
+            .col-sm-6
+              .form-group
+                input.fill(type="text", name="first_name", placeholder="First Name", id="first_name", required)
+            .col-sm-6
+              .form-group
+                input.fill(type="text", name="last_name", placeholder="Last Name", id="last_name", required)
+            .col-sm-6
+              .form-group
+                input.fill(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
+            .col-sm-6
+              .form-group
+                input.fill(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
+            .col-sm-6
+              .form-group
+                input.fill(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
+            .col-sm-6
+              .form-group
+                input(type="text", name="phone_number", placeholder="Phone Number e.g. 123-123-1234 (Optional)", id="phone_number", maxlength="12")
+            .col-sm-12  
+              .form-group
+                textarea#requirements(name="requirements", placeholder="Tell us about your requirements.")
+            .col-sm-12
+              .form-group.filled
+                label(for="human") What is 5+2? (Anti-Spam)
+                input(type="text", name="human", placeholder="Type your answer...")
           button(type="submit", role="button", id="submit", name="submit") Send
 footer.site-footer
   .container

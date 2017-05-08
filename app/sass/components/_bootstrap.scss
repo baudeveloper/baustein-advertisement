@@ -2,6 +2,9 @@ $brand-primary: $color-primary !default;
 $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $icon-font-path: 'if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/") !default';
 
+// Screen Cap
+$container-large-desktop: 1062px !default;
+
 // Tabs
 $nav-tabs-border-color: transparent !default;
 $nav-tabs-link-hover-border-color: transparent !default;

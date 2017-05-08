@@ -66,11 +66,14 @@ $grey: #333;
 $greyed: #b5b5b5;
 $greyish: #999;
 $grey_light: #4b4b4b;
+$grey_dark: #ccc;
 $blue: #205685;
+$blue_dark: #143755;
 $orange: #f58220;
+$orange_light: #e97b1e;
 $orange_dark: #f26522;
 $sky_blue: #7fd3ee;
-$grey_dark: #222;
+$grey_dark: #d3d3d4;
 
 // Colors init.
 
@@ -81,11 +84,18 @@ $color-primary: $blue;
 *::-moz-selection { color: $white; background-color: $black; }
 *::selection { color: $white; background-color: $black; }
 
-// 5. Font Awesome Icon Insertion
-
-@mixin icon-before($content) {
-  &::before {
-    content: $content;
-    font-family: "fontawesome";
+// Input Placeholder colour
+@mixin input_text_color($color) {
+  &::-webkit-input-placeholder {
+   color: $color;
+  }
+  &:-moz-placeholder {
+   color: $color;
+  }
+  &::-moz-placeholder {
+   color: $color;
+  }
+  &:-ms-input-placeholder {
+   color: $color;
   }
 }
