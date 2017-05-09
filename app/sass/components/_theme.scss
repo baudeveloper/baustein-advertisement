@@ -482,7 +482,7 @@
       margin-bottom: 0;
     }
     .tab-content {
-      text-align: center;
+      display: none;
     }
     h2 {
       padding: 0;
@@ -492,7 +492,7 @@
     #expertise_tab-accordion {
       background: $white;
       margin-bottom: 5px;
-      padding: 20px 15px 0;
+      padding: 20px 15px;
       .panel-heading {
         a[aria-expanded="false"]::before {
           content: "\f107";
@@ -501,7 +501,7 @@
         }
         a[aria-expanded="true"]::before {
           content: "\f106";
-          margin-right: 5px;
+          margin-right: 5px;          
           font-family: "fontawesome"; 
         } 
       }   
