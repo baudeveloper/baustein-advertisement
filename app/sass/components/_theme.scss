@@ -494,13 +494,13 @@
       margin-bottom: 5px;
       padding: 20px 15px;
       .panel-heading {
-        a[aria-expanded="false"]::before {
-          content: "\f107";
+        a::before {
+          content: "\f106";
           margin-right: 5px;
           font-family: "fontawesome"; 
         }
-        a[aria-expanded="true"]::before {
-          content: "\f106";
+        a.collapsed::before {
+          content: "\f107";
           margin-right: 5px;          
           font-family: "fontawesome"; 
         } 
