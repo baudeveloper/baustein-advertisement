@@ -357,62 +357,80 @@
                         }
                       ?>"
                     >
-                        <div class="form-group">
-                            <input class="fill" required type="text" name="first_name" placeholder="First Name" id="first_name" value="<?php if(isset($first_name)) { echo $first_name; } ?>">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input class="fill" required type="text" name="first_name" placeholder="First Name" id="first_name" value="<?php if(isset($first_name)) { echo $first_name; } ?>">
+                              <?php
+                                if(isset($error_fn)) :
+                                  echo $error_fn;
+                                endif;
+                              ?>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input class="fill" required type="text" name="last_name" placeholder="Last Name" id="last_name" value="<?php if(isset($last_name)) { echo $last_name; } ?>">
+                              <?php
+                                if(isset($error_ln)) :
+                                  echo $error_ln;
+                                endif;
+                              ?>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input class="fill" required type="text" name="company_name" placeholder="Company Name" id="company_name" value="<?php if(isset($company_name)) { echo $company_name; } ?>">
+                              <?php
+                                if(isset($error_cn)) :
+                                  echo $error_cn;
+                                endif;
+                              ?>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input class="fill" required type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input class="fill" required type="email" name="email_address" placeholder="Email Address" id="email_address" value="<?php if(isset($email_address)) { echo $email_address; } ?>">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                              <input type="text" name="phone_number" placeholder="Phone Number e.g. 123-123-1234 (Optional)" id="phone_number" value="<?php if(isset($phone_number)) { echo $phone_number; } ?>" maxlength="12">
+                              <?php
+                                if(isset($error_pn)) :
+                                  echo $error_pn;
+                                endif;
+                              ?>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <textarea id="requirements" name="requirements" placeholder="Tell us about your requirements."></textarea>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="form-group filled">
+                            <label for="human">What is 5+2? (Anti-Spam)</label>
+                            <input type="text" name="human" placeholder="Type your answer...">
                             <?php
-                              if(isset($error_fn)) :
-                                echo $error_fn;
+                              if(isset($error_hu)) :
+                                echo $error_hu;
                               endif;
                             ?>
-                        </div>
-                        <div class="form-group">
-                            <input class="fill" required type="text" name="last_name" placeholder="Last Name" id="last_name" value="<?php if(isset($last_name)) { echo $last_name; } ?>">
-                            <?php
-                              if(isset($error_ln)) :
-                                echo $error_ln;
-                              endif;
-                            ?>
-                        </div>
-                        <div class="form-group">
-                            <input class="fill" required type="text" name="company_name" placeholder="Company Name" id="company_name" value="<?php if(isset($company_name)) { echo $company_name; } ?>">
-                            <?php
-                              if(isset($error_cn)) :
-                                echo $error_cn;
-                              endif;
-                            ?>
-                        </div>
-                        <div class="form-group">
-                            <input class="fill" required type="url" name="company_website" placeholder="Company Website" id="company_website" value="<?php if(isset($company_website)) { echo $company_website; } ?>">
-                        </div>
-                        <div class="form-group">
-                            <input class="fill" required type="email" name="email_address" placeholder="Email Address" id="email_address" value="<?php if(isset($email_address)) { echo $email_address; } ?>">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="phone_number" placeholder="Phone Number e.g. 123-123-1234 (Optional)" id="phone_number" value="<?php if(isset($phone_number)) { echo $phone_number; } ?>" maxlength="12">
-                            <?php
-                              if(isset($error_pn)) :
-                                echo $error_pn;
-                              endif;
-                            ?>
-                        </div>
-                        <div class="form-group">
-                          <textarea id="requirements" name="requirements" placeholder="Tell us about your requirements."></textarea>
-                        </div>
-                        <div class="form-group filled">
-                          <label for="human">What is 5+2? (Anti-Spam)</label>
-                          <input type="text" name="human" placeholder="Type your answer...">
-                          <?php
-                            if(isset($error_hu)) :
-                              echo $error_hu;
-                            endif;
-                          ?>
+                          </div>
                         </div>
                         <?php
                           if(isset($msg)) :
                             echo '<div class="report">'.$msg.'</div>';
                           endif;
                         ?>
-                        <button type="submit" role="button" id="submit" name="submit">Send</button>
+                      </div>
+                      <button type="submit" role="button" id="submit" name="submit">Send</button>
                     </form>
                 </div>
             </div>
