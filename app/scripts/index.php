@@ -170,7 +170,7 @@
           <li class="active" role="presentation"><a href="#brand_development" aria-controls="brand_development" role="tab" data-toggle="tab">Brand Development</a></li>
           <li role="presentation"><a href="#marketing" aria-controls="marketing" role="tab" data-toggle="tab">Marketing</a></li>
           <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
-          <li role="presentation"><a href="#digital" aria-controls="digital" role="tab" data-toggle="tab">Digital</a></li>
+          <li role="presentation"><a href="#websites" aria-controls="websites" role="tab" data-toggle="tab">Websites</a></li>
         </ul>
       </div>
       <div class="tab-content">
@@ -292,7 +292,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane" id="digital" role="tabpanel">
+        <div class="tab-pane" id="websites" role="tabpanel">
           <div class="row">
             <div class="col-sm-4">
               <h2>Website Design & Build</h2>
