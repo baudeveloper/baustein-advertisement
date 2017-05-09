@@ -160,9 +160,9 @@
     }
   }  
   .feature {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // align-items: center;
     width: 100%;
     height: auto;
     border-radius: 0;
@@ -243,18 +243,18 @@
       }
     }
   }
-  @media #{$phablet__up} {
-    .equal {
-      display: flex;
-      > div {
-        display: flex;
-        flex-direction: column;
-        > * {
-          flex-grow: 1;
-        }
-      }
-    }
-  }
+  // @media #{$phablet__up} {
+  //   .equal {
+  //     display: flex;
+  //     > div {
+  //       display: flex;
+  //       flex-direction: column;
+  //       > * {
+  //         flex-grow: 1;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .advertise {
