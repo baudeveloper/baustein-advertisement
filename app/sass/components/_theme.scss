@@ -174,6 +174,7 @@
     @media #{$phablet} {
       display: block;
       flex-flow: inherit;
+      text-align: center;
       margin: 0 0 $px_fifteen;
       padding: 0;
     }
@@ -230,7 +231,7 @@
         margin-left: 10px;
         text-transform: uppercase;
         @include font-size(14px);
-      }
+      }      
     }      
     p {
       color: $white;
@@ -261,6 +262,7 @@
   margin-top: $px_ten*6;
   margin-bottom: $px_ten*6;
   @media #{$phablet} {
+    text-align: center;
     margin-top: $px_ten*3;
     margin-bottom: $px_ten*3;
   }
@@ -361,20 +363,20 @@
 
 .expertise {  
   .nav-tabs__bg {
+    position: relative;
     background-color: #f2f2f2;
   }
   .nav-tabs {       
     @extend .container;    
     > li {
       @include make-xs-column(6);
-      @include make-sm-column(6);
-      @include make-md-column(3);
+      @include make-sm-column(3);
       padding-left: 0;
       padding-right: 0;
       a {
         border-radius: 0;
         border-color: $grey_dark;
-        color: $grey;  
+        color: $grey; 
         margin-right: -1px; 
         text-align: center;
         word-wrap: break-word;
@@ -388,22 +390,59 @@
         a {
           color: $orange;       
           font-weight: $font-weight-medium;
-          @media #{$tablet__up} {
+          @media #{$phablet__up} {
             border-bottom-color: $white;   
           }
         }
       }      
     }
-    @media #{$tablet} {
-      padding-top: 15px;
-      padding-bottom: 15px;
+    @media #{$phablet__up} {
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-bottom: 1px solid $grey_dark;
+      }
       > li {
-        &.active {
-          background: transparent;
-        }  
-      } 
+        a {
+          border-top: none;
+          &:hover, &:focus {
+            border-top: none;
+          }
+        }
+        &:first-child {
+          a {
+            border-left: none;
+          }
+        }
+        &:last-child {
+          a {
+            border-right: none;
+          }
+        }
+      }
+      > li.active {
+        &:first-child {
+          a {
+            border-left: 1px solid $grey_dark;
+          }
+        }
+        &:last-child {
+          a {
+            border-right: 1px solid $grey_dark;
+          }
+        }
+      }
     }
-    @media #{$phablet} {            
+    @media #{$phablet} {   
+      padding-top: 15px;
+      padding-bottom: 15px;         
       > li {
         a {
           padding: 15px 0;
@@ -442,11 +481,31 @@
     .row {
       margin-bottom: 0;
     }
+    .tab-content {
+      text-align: center;
+    }
     h2 {
       padding: 0;
       margin: $px_ten 0;
       font-weight: $font-weight-medium;      
     }    
+    #expertise_tab-accordion {
+      background: $white;
+      margin-bottom: 5px;
+      padding: 20px 15px 0;
+      .panel-heading {
+        a[aria-expanded="false"]::before {
+          content: "\f107";
+          margin-right: 5px;
+          font-family: "fontawesome"; 
+        }
+        a[aria-expanded="true"]::before {
+          content: "\f106";
+          margin-right: 5px;
+          font-family: "fontawesome"; 
+        } 
+      }   
+    }
   }
 }
 
@@ -571,8 +630,8 @@
     text-align: center;
     @include make-sm-column(8);
     @include make-sm-column-offset(2);
-    @include make-md-column(6);
-    @include make-md-column-offset(3);
+    @include make-md-column(8);
+    @include make-md-column-offset(2);
   }
   h2 {
     padding: 0;
@@ -649,14 +708,14 @@
     color: $grey;
     box-shadow: none;
     @extend .form-control;
-    @include font-size(18px);
-    margin-bottom: $px_ten*3;
+    @include font-size(14px);
+    margin-bottom: $px_ten*2;
     border: 1px solid $greyed;
     font-weight: $font-weight-light;
     @include input_text_color($greyish);
-    padding: $px_fifteen $px_ten+$px_fifteen;
+    padding: 9px 25px 9px 15px;
     @media #{$phablet} {
-      padding: $px_fifteen;
+      padding: 9px $px_fifteen;
       @include font-size(14px);
       margin-bottom: $px_ten*2;
     }
@@ -668,14 +727,14 @@
     height: auto;
     min-height: $px_ten*15;
     box-shadow: none;
-    @include font-size(18px);
-    margin-bottom: $px_ten*3;
+    @include font-size(14px);
+    margin-bottom: $px_ten*2;
     border: 1px solid $greyed;
     font-weight: $font-weight-light;
     @include input_text_color($greyish);
-    padding: $px_fifteen $px_ten+$px_fifteen;
+    padding: 9px 25px 9px 15px;
     @media #{$phablet} {
-      padding: $px_fifteen;
+      padding: 9px $px_fifteen;
       @include font-size(14px);
       margin-bottom: $px_ten*2;
     }
@@ -692,9 +751,9 @@
     background: $orange;
     margin-top: $px_ten*2;
     border-radius: $px_four;
-    @include font-size(18px);
+    @include font-size(14px);
     text-transform: uppercase;
-    padding: 18px $px_ten+$px_fifteen;
+    padding: 12px $px_ten+$px_fifteen;
     font-weight: $font-weight-bold;
     &:hover,
     &:active,
@@ -702,8 +761,7 @@
       background: darken($orange, 15%);
     }
     @media #{$phablet} {
-      padding: $px_fifteen;
-      @include font-size(16px);
+      padding: 12px $px_fifteen;
       margin: 0 0 $px_ten*2;
     }
   }

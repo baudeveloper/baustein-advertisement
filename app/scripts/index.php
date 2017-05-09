@@ -165,7 +165,7 @@
       </div>
     </section>
     <section class="expertise">
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs" id="expertise_tab" role="tablist">
         <li class="active" role="presentation"><a href="#brand_development" aria-controls="brand_development" role="tab" data-toggle="tab">Brand Development</a></li>
         <li role="presentation"><a href="#marketing" aria-controls="marketing" role="tab" data-toggle="tab">Marketing</a></li>
         <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
@@ -441,6 +441,7 @@
     <script src="vendor/js/jquery.validate.min.js"></script>
     <script src="vendor/js/additional-methods.min.js"></script>
     <script src="vendor/js/jquery.ns-autogrow.min.js"></script>
+    <script src="vendor/js/tabcollapse.js"></script>
     <script src="js/custom.min.js"></script>
 </body>
 

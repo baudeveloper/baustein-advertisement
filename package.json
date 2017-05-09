@@ -27,7 +27,7 @@
     "favicon": "npm run favicon-generate && npm run favicon-html",
     "copy": "mkdirp dist/vendor/js -p && mkdirp dist/vendor/css -p && npm run vendor_css && npm run vendor_js",
     "vendor_css": "copyfiles -f bower_components/aos/dist/aos.css dist/vendor/css",
-    "vendor_js": "copyfiles -f bower_components/html5shiv/dist/html5shiv.min.js app/js/respond.min.js app/js/modernizr.min.js bower_components/jquery/dist/jquery.min.js bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js bower_components/aos/dist/aos.js bower_components/jquery-validation/dist/jquery.validate.min.js bower_components/jquery-validation/dist/additional-methods.min.js bower_components/jquery.ns-autogrow/dist/jquery.ns-autogrow.min.js dist/vendor/js",
+    "vendor_js": "copyfiles -f bower_components/html5shiv/dist/html5shiv.min.js app/js/respond.min.js app/js/modernizr.min.js app/js/tabcollapse.js bower_components/jquery/dist/jquery.min.js bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js bower_components/aos/dist/aos.js bower_components/jquery-validation/dist/jquery.validate.min.js bower_components/jquery-validation/dist/additional-methods.min.js bower_components/jquery.ns-autogrow/dist/jquery.ns-autogrow.min.js dist/vendor/js",
     "vendor_fonts": "copyfiles -f bower_components/font-awesome/fonts/**/*.* bower_components/bootstrap-sass/assets/fonts/bootstrap/**/*.* dist/fonts",
     "scss": "node-sass --output-style compressed -o dist/css app/sass",
     "lint-scss": "stylelint app/sass/**/*.scss --syntax scss || true",

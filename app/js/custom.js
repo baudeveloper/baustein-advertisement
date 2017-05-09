@@ -57,4 +57,7 @@ $(function() {
     $(this).find('.filled').show();
   }
 
+  // TABS to ACCORDION
+  $('#expertise_tab').tabCollapse();
+
 })();
