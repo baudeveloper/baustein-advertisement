@@ -165,12 +165,14 @@
       </div>
     </section>
     <section class="expertise">
-      <ul class="nav nav-tabs" id="expertise_tab" role="tablist">
-        <li class="active" role="presentation"><a href="#brand_development" aria-controls="brand_development" role="tab" data-toggle="tab">Brand Development</a></li>
-        <li role="presentation"><a href="#marketing" aria-controls="marketing" role="tab" data-toggle="tab">Marketing</a></li>
-        <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
-        <li role="presentation"><a href="#digital" aria-controls="digital" role="tab" data-toggle="tab">Digital</a></li>
-      </ul>
+      <div class="nav-tabs__bg">   
+        <ul class="nav nav-tabs" id="expertise_tab" role="tablist">
+          <li class="active" role="presentation"><a href="#brand_development" aria-controls="brand_development" role="tab" data-toggle="tab">Brand Development</a></li>
+          <li role="presentation"><a href="#marketing" aria-controls="marketing" role="tab" data-toggle="tab">Marketing</a></li>
+          <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+          <li role="presentation"><a href="#digital" aria-controls="digital" role="tab" data-toggle="tab">Digital</a></li>
+        </ul>
+      </div>
       <div class="tab-content">
         <div class="tab-pane active" id="brand_development" role="tabpanel">
           <div class="row">
