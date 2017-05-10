@@ -495,10 +495,10 @@
       margin-bottom: 5px;
       padding: 20px 15px;
       .panel-heading {
-        padding: 0;
         a {
           display: block;
-          padding: 15px;          
+          padding: 10px 15px;
+          margin: -10px -15px;   
         }
         a::before {
           content: "\f106";
