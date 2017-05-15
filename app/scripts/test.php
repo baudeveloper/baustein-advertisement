@@ -7,7 +7,7 @@
         $requirements = $_POST['requirements'];
         $to = "test@baustein.ca";
         $subject = "From $first_name -- Baustein Landing Page";
-        $message = "Thanks, A form has been submitted.\nName: ".$first_name." ".$last_name."\nCompany Name: ".$company_name."\nCompany Website: ".$company_website."\nEmail Address: ".$email_address."\nMessage: ".$requirements;
+        $message = "Thanks, A form has been submitted.\nName: ".$first_name." ".$last_name."\nCompany Name: ".$company_name."\nEmail Address: ".$email_address."\nMessage: ".$requirements;
         mail($to, $subject, $message);
     }
 ?>
