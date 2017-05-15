@@ -17,6 +17,15 @@ $("#form_contact").submit(function(event){
     // Serialize the data in the form
     var serializedData = $form.serialize();
 
+    // Send mail
+    var data = {
+        first_name: $("#first_name").val(),
+        last_name: $("#last_name").val(),
+        company_name: $("#company_name").val(),
+        email_address: $("#email_address").val(),
+        requirements: $("#requirements").val(),
+    };
+
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
     // Disabled form elements will not be serialized.
@@ -25,6 +34,12 @@ $("#form_contact").submit(function(event){
     // Fire off the request to /form.php
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbyWVlUtO5d3PH4xDqouNV2YTWsTxtpdINXfKdsoJLayxsJyRleO/exec",
+        type: "post",
+        data: serializedData
+    });
+
+    request = $.ajax({
+        url: "test.php",
         type: "post",
         data: serializedData
     });

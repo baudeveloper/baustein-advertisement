@@ -137,7 +137,7 @@
             <div class="row">
               <div class="advertise_heading">
                 <h2>A limited marketing budget does not mean limited access to good design.</h2>
-                <p>For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.</p>
+                <p>For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.</p>
               </div>
                 <div class="advertise_content"><img src="images/icons/animation_designer.svg" alt="Sole Graphic Designer"><img src="images/icons/animation_arrow.svg" alt="Arrow"><img src="images/icons/animation_roles.svg" alt="Roles of a Designer"></div>
             </div>
@@ -436,3 +436,4 @@
 </body>
 
 </html>
+
