@@ -42,9 +42,6 @@ section.advertise
         h2 A limited marketing budget does not mean limited access to good design.
         p For roughly the same cost of a full-time designer, you can access an entire design team, each person specializing in the different aspects of design that will cover all your company’s creative needs. Good design can add value to any business.
       .advertise_content
-        //- img(src="images/icons/animation_designer.svg", alt="Sole Graphic Designer", data-aos="fade-right", data-aos-delay="1000")
-        //- img(src="images/icons/animation_arrow.svg", alt="Arrow", data-aos="fade-right", data-aos-delay="2000")
-        //- img(src="images/icons/animation_roles.svg", alt="Roles of a Designer", data-aos="fade-right", data-aos-delay="3000")
         img(src="images/icons/animation_designer.svg", alt="Sole Graphic Designer")
         img(src="images/icons/animation_arrow.svg", alt="Arrow")
         img(src="images/icons/animation_roles.svg", alt="Roles of a Designer")
@@ -178,60 +175,16 @@ section.portfolio
   .container
     h2 Trusted by International Wealth Management Firms
   .tab_wrap
-    //- ul#portfolio_tab.nav.nav-tabs(data-tabs='tabs')
     ul#portfolio_tab
       li.portfolio-item
-        //- a.item_first(data-toggle='tab', href='#portfolio_first')
         div.item_first
           img.hidden(src="images/project_first.jpg", alt="AFL Investments Limited")
-          //- span
-          //-   img(src="images/icons/logo_more.svg", alt="See more")
       li.portfolio-item
-        //- a.item_second(data-toggle='tab', href='#portfolio_second')
         div.item_second
           img.hidden(src="images/project_second.jpg", alt="NexGen Financial Corporation")
-          //- span
-          //-   img(src="images/icons/logo_more.svg", alt="See more")
       li.portfolio-item
-        //- a.item_third(data-toggle='tab', href='#portfolio_third')
         div.item_third
-          img.hidden(src="images/project_third.jpg", alt="Cidel Group")
-          //- span
-          //-   img(src="images/icons/logo_more.svg", alt="See more")
-    //- .tab-content
-    //-   #portfolio_first.tab-pane
-    //-     .row
-    //-       .portfolio_sidebar  
-    //-         span.client_name AFL Investments Limited
-    //-         span.client_location Hamilton, Bermuda
-    //-         span.client_services Logo, Factsheets, Introductory Brochure
-    //-         span.client_tags Branding, Reporting, Website (not shown)
-    //-       .portfolio_gallery
-    //-         img(src="images/portfolio_layout_afl.jpg", alt="AFL Investments Limited")
-    //-     a.close(href="#")
-    //-       span &times;
-    //-   #portfolio_second.tab-pane
-    //-     .row
-    //-       .portfolio_sidebar  
-    //-         span.client_name NexGen Financial Corporation
-    //-         span.client_location Toronto, Canada
-    //-         span.client_services Logo, Factsheets, Introductory Brochure
-    //-         span.client_tags Branding, Reporting, Website (not shown)
-    //-       .portfolio_gallery
-    //-         img(src="images/portfolio_layout_nexgen.jpg", alt="NexGen Financial Corporation")
-    //-     a.close(href="#")
-    //-       span &times;
-    //-   #portfolio_third.tab-pane
-    //-     .row
-    //-       .portfolio_sidebar  
-    //-         span.client_name Cidel Group
-    //-         span.client_location Toronto, Canada
-    //-         span.client_services Logo, Factsheets, Introductory Brochure
-    //-         span.client_tags Branding, Reporting, Website (not shown)
-    //-       .portfolio_gallery
-    //-         img(src="images/portfolio_layout_cidel.jpg", alt="Cidel Group")
-    //-     a.close(href="#")
-    //-       span &times;   
+          img.hidden(src="images/project_third.jpg", alt="Cidel Group") 
 section.contact#contact__link 
   .container
     .row
@@ -255,27 +208,18 @@ section.contact#contact__link
                 input.fill(type="text", name="company_name", placeholder="Company Name", id="company_name", required)
             .col-sm-6
               .form-group
-                input.fill(type="url", name="company_website", placeholder="Company Website", id="company_website", required)
-            .col-sm-6
-              .form-group
                 input.fill(type="email", name="email_address", placeholder="Email Address", id="email_address", required)
-            .col-sm-6
-              .form-group
-                input(type="text", name="phone_number", placeholder="Phone Number (Optional)", id="phone_number", maxlength="12")
             .col-sm-12  
               .form-group
-                textarea#requirements(name="requirements", placeholder="Tell us about your requirements.")
-            //- .col-sm-12
-            //-   .form-group.filled
-            //-     label(for="human") What is 5+2? (Anti-Spam)
-            //-     input(type="text", name="human", placeholder="Type your answer...")
+                textarea#requirements(name="requirements", placeholder="Tell us about your requirements.", required)
           #success
           button(type="submit", role="button", id="submit", name="submit") Send
 footer.site-footer
   .container
     .row
       .brand
-        img(src="images/icons/logo_baustein_white.svg", alt="Baustein, A Design and Visual brand agency")
+        a(href="http://baustein.ca" target="_blank", title="Visit Baustein Strategic Design Group Inc.")
+          img(src="images/icons/logo_baustein_white.svg", alt="Baustein, A Design and Visual brand agency")
       .rgd
         small Proud Member of
         img(src="images/icons/logo_rgd.svg", alt="Proud member of RGD")
@@ -286,4 +230,7 @@ footer.site-footer
       .phone
         a(href="tel:+16474305262") +1 647 430 5262
       .copyright
-        p Copyright © 2006 – 2017 Baustein Strategic Design Group Inc. All Rights Reserved.
+        p 
+          | Copyright © 2006 – 2017 
+          a(href="http://baustein.ca" target="_blank", title="Visit Baustein Strategic Design Group Inc.") Baustein Strategic Design Group Inc.
+          |  All Rights Reserved.
