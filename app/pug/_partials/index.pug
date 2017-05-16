@@ -31,12 +31,18 @@ section.features
             | .
       .feature-item.link        
         .feature            
-          h2 How We Can Help
-          p
-            | Download our corporate brochure to find out Who We Are, What We Do and How We Do It.
-          a(href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf", target="_blank", title="Download our corporate brochure to find out Who We Are, What We Do and How We Do It.")
-            img(src="images/icons/logo_pdf.svg", alt="How We Can Help")
-            span Report
+          h2 How We Can Help          
+          .feature__content
+            p
+              | Download our corporate brochure to find out Who We Are, What We Do and How We Do It.            
+          .feature__brochure
+            a(href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf", target="_blank", title="Download our corporate brochure to find out Who We Are, What We Do and How We Do It.")
+              img(src="../images/corporate_brochure.png", alt="How We Can Help")
+          //- .clearfix
+          //- .feature__report
+          //-   a(href="https://www.designcouncil.org.uk/sites/default/files/asset/document/dc_lbbd_report_08.11.13_FA_LORES.pdf", target="_blank", title="Download our corporate brochure to find out Who We Are, What We Do and How We Do It.")
+          //-     img(src="images/icons/logo_pdf.svg", alt="How We Can Help")
+          //-     span Report
 section.advertise
   .container
     .row
