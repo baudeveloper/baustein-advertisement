@@ -12,12 +12,15 @@ html
         script(src="vendor/js/modernizr.min.js")
         script
             include ../../scripts/google-analytics.js
+        script
+            include ../../scripts/google-tag-manager.js
         <!--[if lt IE 9]>
         script(src="vendor/js/html5shiv.min.js")
         script(src="vendor/js/respond.min.js")
         <![endif]-->        
     block vars
     body(class=bodyClass)
+        include ../../scripts/google-tag-manager-noscript.js
         block content                
         script(src="vendor/js/jquery.min.js")
         script(src="vendor/js/bootstrap.min.js")
