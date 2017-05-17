@@ -278,7 +278,6 @@
         box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4); 
         @media #{$tablet__up} {
           width: 80px;
-          margin-top: 5px;
           margin-left: -25px;
           transform: rotate(10deg);
         }
