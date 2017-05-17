@@ -856,11 +856,6 @@ footer {
   @media #{$phablet} {
     text-align: center;
     background-size: cover;
-    background-position: 20% center;
-  }
-  @media #{$phablet} {
-    text-align: center;
-    background-size: cover;
     background-position: 30% center;
   }
   p {
@@ -907,8 +902,8 @@ footer {
   .copyright {
     @include make-sm-column(8);
     @media #{$phablet} {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-top: $px_ten*3;
+      margin-bottom: $px_ten*3;
     }
     @media #{$phablet__up} {
       float: left;
@@ -936,8 +931,8 @@ footer {
   .phone {
     @include make-sm-column(4);
     @media #{$phablet} {
-      margin-top: $px_ten*3;
-      margin-bottom: $px_ten*3;
+      margin-top: 0;
+      margin-bottom: 0;
     }
     @media #{$phablet__up} {
       float: right;
