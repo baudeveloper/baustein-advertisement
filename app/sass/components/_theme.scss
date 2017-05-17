@@ -917,10 +917,11 @@ footer {
     @media #{$phablet__up} {
       float: left;
     }
-    p {
+    p {      
       @include font-size(12px);
       @media #{$phablet} {
         margin-bottom: 0;
+        line-height: 1.5;
       }
     }
     a {
