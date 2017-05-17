@@ -248,36 +248,39 @@
     // }  
     a {      
       transition: all .4s ease;    
-      @media #{$tablet__up} {
-        position: absolute;
-        content: '';
-        z-index: 1;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 80px;
-        padding: 5px;
-        overflow: hidden;
-        &::before {
-          position: absolute;
-          content: '';       
-          z-index: 2;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 1px;
-          border: 1px solid darken($orange, 10%);
-        }
-      }
+      // @media #{$tablet__up} {
+      //   position: absolute;
+      //   content: '';
+      //   z-index: 1;
+      //   left: 0;
+      //   right: 0;
+      //   top: 0;
+      //   bottom: 0;
+      //   width: 100%;
+      //   height: 80px;
+      //   padding: 5px;
+      //   overflow: hidden;
+      //   &::before {
+      //     position: absolute;
+      //     content: '';       
+      //     z-index: 2;
+      //     left: 0;
+      //     right: 0;
+      //     bottom: 0;
+      //     width: 100%;
+      //     height: 1px;
+      //     border: 1px solid darken($orange, 10%);
+      //   }
+      // }
       img {
         max-width: 100%;
         transition: all .4s ease;
         box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4); 
         @media #{$tablet__up} {
           width: 80px;
+          margin-top: 5px;
+          margin-left: -25px;
+          transform: rotate(10deg);
         }
         @media #{$tablet} {
           width: 100px;
@@ -288,7 +291,6 @@
       }   
       &:hover {
         img {
-          transform: translateY(-3px);
           box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.5);
         }
       }
@@ -829,31 +831,9 @@
     }
     @media #{$phablet} {
       margin-bottom: $px_ten*3;
-      // margin: 0 0 $px_ten;
       padding: 12px $px_fifteen;
     }
   }
-  // .divider {
-  //   margin-top: $px_ten*6;
-  //   padding: $px_ten*2 0;
-  //   border-top: 1px dashed $grey;
-  //   p {
-  //     margin: 0;
-  //     padding: 0;
-  //     color: $grey;
-  //     font-weight: $font-weight-regular;      
-  //     @include font-size(12px);
-  //   }
-  //   @media #{$phablet} {
-  //     margin-top: $px_ten*3;
-  //     padding: $px_ten*2 0;
-  //   }
-  // }
-  // @media #{$phablet} {
-  //   #success {
-  //     margin-bottom: 15px;
-  //   }
-  // }
 }
 
 footer {
@@ -962,6 +942,7 @@ footer {
     }
     @media #{$phablet__up} {
       float: right;
+      margin-top: -3px;
     }
     a {
       color: $white;
