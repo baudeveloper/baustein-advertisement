@@ -816,6 +816,7 @@
     text-align: center;
     background: $orange;
     margin-top: $px_ten*2;
+    margin-bottom: $px_ten*6;
     border-radius: $px_four;
     @include font-size(14px);
     text-transform: uppercase;
@@ -827,31 +828,32 @@
       background: darken($orange, 15%);
     }
     @media #{$phablet} {
-      margin: 0 0 $px_ten;
+      margin-bottom: $px_ten*3;
+      // margin: 0 0 $px_ten;
       padding: 12px $px_fifteen;
     }
   }
-  .divider {
-    margin-top: $px_ten*6;
-    padding: $px_ten*2 0;
-    border-top: 1px dashed $grey;
-    p {
-      margin: 0;
-      padding: 0;
-      color: $grey;
-      font-weight: $font-weight-regular;      
-      @include font-size(12px);
-    }
-    @media #{$phablet} {
-      margin-top: $px_ten*3;
-      padding: $px_ten*2 0;
-    }
-  }
-  @media #{$phablet} {
-    #success {
-      margin-bottom: 15px;
-    }
-  }
+  // .divider {
+  //   margin-top: $px_ten*6;
+  //   padding: $px_ten*2 0;
+  //   border-top: 1px dashed $grey;
+  //   p {
+  //     margin: 0;
+  //     padding: 0;
+  //     color: $grey;
+  //     font-weight: $font-weight-regular;      
+  //     @include font-size(12px);
+  //   }
+  //   @media #{$phablet} {
+  //     margin-top: $px_ten*3;
+  //     padding: $px_ten*2 0;
+  //   }
+  // }
+  // @media #{$phablet} {
+  //   #success {
+  //     margin-bottom: 15px;
+  //   }
+  // }
 }
 
 footer {
@@ -918,15 +920,16 @@ footer {
       line-height: 1.5;
       @include font-size(14px);
       @media #{$phablet} {
-        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: $px_ten*3;
       }
     }
   }
   .copyright {
-    margin-top: $px_ten*5;
     @include make-sm-column(8);
     @media #{$phablet} {
-      margin-top: $px_ten*2;
+      margin-top: 0;
+      margin-bottom: 0;
     }
     @media #{$phablet__up} {
       float: left;
@@ -952,10 +955,10 @@ footer {
     }
   }
   .phone {
-    margin-top: 48px;
     @include make-sm-column(4);
     @media #{$phablet} {
-      margin-top: $px_ten*2;
+      margin-top: $px_ten*3;
+      margin-bottom: $px_ten*3;
     }
     @media #{$phablet__up} {
       float: right;
@@ -966,6 +969,23 @@ footer {
       &:hover, &:active, &:focus {
         color: darken($white, 15%);
       }
+    }
+  }
+  .footnote {
+    @include make-sm-column(12);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    p {
+      margin: 0;
+      padding: 0;
+      color: $white;
+      font-weight: $font-weight-regular;      
+      @include font-size(12px);
+    }
+    @media #{$phablet} {
+      // padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
